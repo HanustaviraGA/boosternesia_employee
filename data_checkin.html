@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="id-ID" xml:lang="id-ID">
 <head>
@@ -24,7 +26,7 @@
   <meta content="http://localhost:80/absensi/absensi/index" property="og:url"/>
   <meta content="Absensi Online - Foto Selfie & Auto Detect Lokasi" property="og:site_name"/>
   <meta content="Absensi Online - Foto Selfie & Auto Detect Lokasi" property="og:headline"/>
-  <meta content="../content/logo/absensionline.jpg" property="og:image"/>
+  <meta content="content/logo/absensionline.jpg" property="og:image"/>
   <meta content="1920" property="og:image:width"/>
   <meta content="1080" property="og:image:height"/>
   <meta content="id_ID" property="og:locale"/>
@@ -42,7 +44,7 @@
   <meta content="http://localhost:80/absensi/absensi/index" property="twitter:url"/>
   <meta content="Absensi Online - Foto Selfie & Auto Detect Lokasi" property="twitter:title"/>
   <meta content="Aplikasi Sistem Absensi Online Berbasis Foto Selfie dan Auto Detect Lokasi. Absen Karyawan Kini Jadi Lebih Efisien. Sistem absensi dengan verifikasi foto selfie atau webcam, dilengkapi fitur deteksi lokasi pengguna yang akurat." property="twitter:description"/>
-  <meta content="../content/logo/absensionline.jpg" property="twitter:image"/>
+  <meta content="content/logo/absensionline.jpg" property="twitter:image"/>
 
   <!--Webapp-->
   <link href="http://localhost:80/absensi/manifest.json" rel="manifest"/>
@@ -63,15 +65,15 @@
   <meta content="yes" name="apple-touch-fullscreen"/>
   <link href="http://localhost:80/absensi/favicon.png" rel="apple-touch-icon"/>
   <link href="http://localhost:80/absensi/favicon.png" rel="shortcut icon" type="image/x-icon"/>
-  <link href="../content/logo/absensionline32.png" rel="icon" sizes="32x32"/>
-  <meta content="../content/logo/absensionline144.png" name="msapplication-TileImage"/>
-  <link href="../content/logo/absensionline180.png" rel="apple-touch-icon"/>
-  <link href="../content/logo/absensionline48.png" rel="icon" sizes="48x48"/>
-  <link href="../content/logo/absensionline72.png" rel="icon" sizes="72x72"/>
-  <link href="../content/logo/absensionline96.png" rel="icon" sizes="96x96"/>
-  <link href="../content/logo/absensionline168.png" rel="icon" sizes="168x168"/>
-  <link href="../content/logo/absensionline192.png" rel="icon" sizes="192x192"/>
-  <link href="../content/logo/absensionline512.png" rel="icon" sizes="512x512"/>
+  <link href="content/logo/absensionline32.png" rel="icon" sizes="32x32"/>
+  <meta content="content/logo/absensionline144.png" name="msapplication-TileImage"/>
+  <link href="content/logo/absensionline180.png" rel="apple-touch-icon"/>
+  <link href="content/logo/absensionline48.png" rel="icon" sizes="48x48"/>
+  <link href="content/logo/absensionline72.png" rel="icon" sizes="72x72"/>
+  <link href="content/logo/absensionline96.png" rel="icon" sizes="96x96"/>
+  <link href="content/logo/absensionline168.png" rel="icon" sizes="168x168"/>
+  <link href="content/logo/absensionline192.png" rel="icon" sizes="192x192"/>
+  <link href="content/logo/absensionline512.png" rel="icon" sizes="512x512"/>
 
   <!--Author-->
   <meta content="Absensi Online - Foto Selfie & Auto Detect Lokasi" name="author" />
@@ -107,6 +109,9 @@
     <link rel="stylesheet" href="assets/js/plugins/datepicker/datepicker3.css">
     <link rel="stylesheet" href="assets/js/plugins/datatables/dataTables.bootstrap.css">
     <link rel="stylesheet" href="assets/js/plugins/magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+
 </head>
 
 <body>
@@ -124,11 +129,11 @@
             </a>
         </div>
         <div class="pageTitle">
-            <img src="../content/logo-absensipng.png" alt="logo" class="logo">
+            <img src="content/logo-absensipng.png" alt="logo" class="logo">
         </div>
         <div class="right">
             <div class="headerButton" data-toggle="dropdown" id="dropdownMenuLink" aria-haspopup="true">
-                <img src="../content/karyawan/2021-06-2618e2999891374a475d0687ca9f989d83.jpg" alt="image" class="imaged w40">
+                <img src="content/karyawan/2021-06-2618e2999891374a475d0687ca9f989d83.jpg" alt="image" class="imaged w40">
                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">                <a class="dropdown-item" onclick="location.href='profile';" href="profile"><ion-icon size="small" name="person-outline"></ion-icon>Profil</a>
                 <a class="dropdown-item" onclick="location.href='logout';" href="logout"><ion-icon size="small" name="log-out-outline"></ion-icon>Keluar</a>
               </div>
@@ -142,7 +147,7 @@
                 <div class="modal-body p-0">
                     <!-- profile box -->
                     <div class="profileBox pt-2 pb-2">
-                        <div class="image-wrapper"><img src="http://localhost:80/absensi/content/karyawan/2021-06-2618e2999891374a475d0687ca9f989d83.jpg" class="imaged w36">
+                        <div class="image-wrapper"><img src="content/karyawan/2021-06-2618e2999891374a475d0687ca9f989d83.jpg" class="imaged w36">
                         </div>
                         <div class="in">
                             <strong>Badrul Juki</strong>
@@ -207,56 +212,34 @@
     </div>
     <!-- * App Sidebar --><!-- App Capsule -->
     <div id="appCapsule">
-    <div class="section mt-2">
-    <div class="card">
-    <div class="card-body">
-        <div class="row text-center">
-        <div class="col-sm-4 col-md-4">
-            <div class="form-group basic">
-                <div class="input-wrapper">
-                    <div class="input-group">
-                        <input type="text" class="form-control datepicker start_date" name="start_date" placeholder="Tanggal Awal" required>
-                        <div class="input-group-addon">
-                            <ion-icon name="calendar-outline"></ion-icon>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-4  col-md-4">
-            <div class="form-group basic">
-                <div class="input-wrapper">
-                    <div class="input-group">
-                        <input type="text" name="end_date" class="form-control datepicker end_date" value="07-11-2021">
-                        <div class="input-group-addon">
-                            <ion-icon name="calendar-outline"></ion-icon>
-                        </div>
-                    </div>
-
-                </div>
-            </div> 
-        </div>
-        <div class="col-sm-4 col-md-4 justify-content-between">
-           <button type="button" class="btn btn-primary mt-1 btn-sortir"><ion-icon name="checkmark-outline"></ion-icon>Tampilkan</button>
-           <button type="button" class="btn btn-warning mt-1" data-toggle="modal" data-target="#modal-print"><ion-icon name="print-outline"></ion-icon> Cetak</button>
-           <button type="button" class="btn btn-success mt-1 btn-clear"><ion-icon name="repeat-outline"></ion-icon> Clear</button>
-        </div>
-
-        </div>       
-    </div>
-    </div>
     </div>
 
         <div class="section mt-2">
             <div class="section-title">Data Absensi</div>
             <div class="card">
                 <div class="table-responsive">
-                    <div class="loaddata"></div>
+                    <table id="table_id" class="display">
+                        <thead>
+                            <tr>
+                                <th>Tanggal</th>
+                                <th>Jam Check In</th>
+                                <th>Jam Check Out</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>13 Desember 2021</td>
+                                <td>14.30</td>
+                                <td>19.00</td>
+                            </tr>
+                            <tr>
+                                <td>12 Desember 2021</td>
+                                <td>13.30</td>
+                                <td>18.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-            </div>
-             <div class="alert alert-warning mt-2" role="alert">
-                <ion-icon name="alert-circle-outline"></ion-icon> Untuk melihat foto absen silahkan klik pada waktu masuk/pulang</a>
             </div>
         </div>
     
@@ -414,6 +397,21 @@
         "autoclose": true
     }); 
     
+</script>
+<script>
+    $(document).ready( function () {
+    $('#table_id').DataTable();
+} );
+    // Disable search and ordering by default
+    $.extend( $.fn.dataTable.defaults, {
+        searching: false
+    } );
+    
+    // For this specific table we are going to enable ordering
+    // (searching is still disabled)
+    $('#table_id').DataTable( {
+        ordering: true
+    } );
 </script>
 <script src="assets/js/sw-script.js"></script>  <!-- </body></html> -->
   </body>
