@@ -106,6 +106,9 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/sw-custom.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+  <link rel="stylesheet" href="assets/js/plugins/datatables/dataTables.bootstrap.css">
 </head>
 
 <body>
@@ -123,88 +126,20 @@
             </a>
         </div>
         <div class="pageTitle">
-            <img src="http://localhost:80/absensi/content/logo-absensipng.png" alt="logo" class="logo">
+            <img src="content/logo-absensipng.png" alt="logo" class="logo">
         </div>
         <div class="right">
             <div class="headerButton" data-toggle="dropdown" id="dropdownMenuLink" aria-haspopup="true">
-                <img src="http://localhost:80/absensi/content/karyawan/2021-06-2618e2999891374a475d0687ca9f989d83.jpg" alt="image" class="imaged w40">
+                <img src="content/karyawan/2021-06-2618e2999891374a475d0687ca9f989d83.jpg" alt="image" class="imaged w40">
                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">                <a class="dropdown-item" onclick="location.href='profile';" href="profile"><ion-icon size="small" name="person-outline"></ion-icon>Profil</a>
                 <a class="dropdown-item" onclick="location.href='logout';" href="logout"><ion-icon size="small" name="log-out-outline"></ion-icon>Keluar</a>
               </div>
             </div>
         </div>
     </div>
-<!-- App Sidebar -->
-    <div class="modal fade panelbox panelbox-left" id="sidebarPanel" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body p-0">
-                    <!-- profile box -->
-                    <div class="profileBox pt-2 pb-2">
-                        <div class="image-wrapper"><img src="http://localhost:80/absensi/content/karyawan/2021-06-2618e2999891374a475d0687ca9f989d83.jpg" class="imaged w36">
-                        </div>
-                        <div class="in">
-                            <strong>Badrul Juki</strong>
-                            <div class="text-muted">badruljuki</div>
-                        </div>
-                        <a href="#" class="btn btn-link btn-icon sidebar-close" data-dismiss="modal">
-                            <ion-icon name="close-outline"></ion-icon>
-                        </a>
-                    </div>
-                    <!-- * profile box -->
-              
-                    <!-- menu -->
-                    <div class="listview-title mt-1">MENU UTAMA</div>
-                    <ul class="listview flush transparent no-line image-listview">
-                        <li>
-                            <a href="./" class="item">
-                                <div class="icon-box bg-primary">
-                                    <ion-icon name="home-outline"></ion-icon>
-                                </div> Home 
-                            </a>
-                        </li>
-                        <li>
-                            <a href="./profile" class="item">
-                                <div class="icon-box bg-primary">
-                                    <ion-icon name="person-outline"></ion-icon>
-                                </div> Profil
-                            </a>
-                        </li>
-                        <li>
-                            <a href="./present" class="item">
-                                <div class="icon-box bg-primary">
-                                    <ion-icon name="scan-outline"></ion-icon>
-                                </div> Absen
-                            </a>
-                        </li>
-                        <li>
-                            <a href="./id-card" class="item">
-                                <div class="icon-box bg-primary">
-                                  <ion-icon name="id-card-outline"></ion-icon>
-                                </div> ID Card
-                            </a>
-                        </li>
-                        <li>
-                            <a href="./history" class="item">
-                                <div class="icon-box bg-primary">
-                                    <ion-icon name="document-text-outline"></ion-icon>
-                                </div> Riwayat
-                            </a>
-                        </li>
-                        <li>
-                            <a href="./logout" class="item">
-                                <div class="icon-box bg-primary">
-                                    <ion-icon name="log-out-outline"></ion-icon>
-                                </div> Keluar
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- * menu -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- * App Sidebar -->
+    <?php
+        include 'assets/layout/sidebar.php'
+    ?>
             <!-- App Capsule -->
             <div id="appCapsule">
                 <!-- Wallet Card -->
@@ -257,60 +192,40 @@
                     </div>
                 </div>
                 <!-- Wallet Card -->
-                <div class="section mt-2 mb-2">
-                    <div class="section-title">1 Minggu Terakhir</div>
-                        <div class="card">
-                            <div class="table-responsive">
-                                <table class="table table-dark rounded bg-primary">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">Tanggal</th>
-                                            <th scope="col">Jam Masuk</th>
-                                            <th scope="col">Jam Pulang</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                    </tbody>
-                                </table>
-                            </div>
+                <div class="section mt-2">
+                    <div class="section-title">Data Absensi</div>
+                    <div class="card">
+                        <div class="table-responsive">
+                            <table id="table_id" class="display">
+                                <thead>
+                                    <tr>
+                                        <th>Tanggal</th>
+                                        <th>Jam Check In</th>
+                                        <th>Jam Check Out</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>13 Desember 2021</td>
+                                        <td>14.30</td>
+                                        <td>19.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12 Desember 2021</td>
+                                        <td>13.30</td>
+                                        <td>18.00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- App Capsule -->
         
-<div class="appBottomMenu">
-        <a href="./" class="item">
-            <div class="col">
-                <ion-icon name="home-outline"></ion-icon>
-                <strong>Home</strong>
-            </div>
-        </a>
-        <a href="./profile" class="item">
-            <div class="col">
-                <ion-icon name="person-outline"></ion-icon>
-                <strong>Profil</strong>
-            </div>
-        </a>
-        <a href="present" class="item">
-            <div class="col">
-                <ion-icon name="camera-outline"></ion-icon>
-                <strong>Absen</strong>
-            </div>
-        </a>
-        <!--<a href="./id-card" class="item">
-            <div class="col">
-               <ion-icon name="id-card-outline"></ion-icon>
-                <strong>ID Card</strong>
-            </div>
-        </a>-->
-        <a href="./history" class="item">
-            <div class="col">
-                 <ion-icon name="document-text-outline"></ion-icon>
-                <strong>Riwayat</strong>
-            </div>
-        </a>
-    </div>
+    <?php 
+        include 'assets/layout/footbar.php';
+    ?>
 <!-- * App Bottom Menu -->
 <!-- ///////////// Js Files ////////////////////  -->
 <!-- Jquery -->
@@ -326,5 +241,22 @@
 <script src="assets/js/sweetalert.min.js"></script>
 <script src="assets/js/webcamjs/webcam.min.js"></script>
 <script src="assets/js/sw-script.js"></script>  <!-- </body></html> -->
+<script src="assets/js/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="assets/js/plugins/datatables/dataTables.bootstrap.min.js"></script>
+<script>
+    $(document).ready( function () {
+    $('#table_id').DataTable();
+} );
+    // Disable search and ordering by default
+    $.extend( $.fn.dataTable.defaults, {
+        searching: false
+    } );
+    
+    // For this specific table we are going to enable ordering
+    // (searching is still disabled)
+    $('#table_id').DataTable( {
+        ordering: true
+    } );
+</script>
   </body>
 </html>
