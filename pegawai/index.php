@@ -15,17 +15,17 @@
   <link href="http://localhost:80/absensi/absensi/index.php" rel="canonical"/>
 
   <!--Title-->
-  <title>Absensi Online - Foto Selfie & Auto Detect Lokasi</title>
-  <meta name="description" content="Halaman Pengguna Absensi Online - Foto Selfie & Auto Detect Lokasi, Aplikasi Sistem Absensi Online Berbasis Foto Selfie dan Auto Detect Lokasi. Absen Karyawan Kini Jadi Lebih Efisien. Sistem absensi dengan verifikasi foto selfie atau webcam, dilengkapi fitur deteksi lokasi pengguna yang akurat."/>
+  <title>Boosternesia Employee Management</title>
+  <meta name="description" content="Halaman Pengguna Boosternesia Employee Management, Aplikasi Sistem Absensi Online Berbasis Foto Selfie dan Auto Detect Lokasi. Absen Karyawan Kini Jadi Lebih Efisien. Sistem absensi dengan verifikasi foto selfie atau webcam, dilengkapi fitur deteksi lokasi pengguna yang akurat."/>
   <meta name="keywords" content="absensi online, aplikasi absensi, aplikasi absensi online, sistem absensi online, absensi online pemerintah, absensi online perusahaan"/>
 
   <!--OG-->
   <meta content="website" property="og:type"/>
-  <meta content="Absensi Online - Foto Selfie & Auto Detect Lokasi" property="og:title"/>
+  <meta content="Boosternesia Employee Management" property="og:title"/>
   <meta content="Aplikasi Sistem Absensi Online Berbasis Foto Selfie dan Auto Detect Lokasi. Absen Karyawan Kini Jadi Lebih Efisien. Sistem absensi dengan verifikasi foto selfie atau webcam, dilengkapi fitur deteksi lokasi pengguna yang akurat." property="og:description"/>
   <meta content="http://localhost:80/absensi/absensi/index" property="og:url"/>
-  <meta content="Absensi Online - Foto Selfie & Auto Detect Lokasi" property="og:site_name"/>
-  <meta content="Absensi Online - Foto Selfie & Auto Detect Lokasi" property="og:headline"/>
+  <meta content="Boosternesia Employee Management" property="og:site_name"/>
+  <meta content="Boosternesia Employee Management" property="og:headline"/>
   <meta content="http://localhost:80/absensi/content/logo/absensionline.jpg" property="og:image"/>
   <meta content="1920" property="og:image:width"/>
   <meta content="1080" property="og:image:height"/>
@@ -37,12 +37,12 @@
   <meta content="" property="fb:pages"/>
   <meta content="" property="fb:admins"/>
   <meta content="" property="fb:profile_id"/>
-  <meta content="Absensi Online - Foto Selfie & Auto Detect Lokasi" property="article:author"/>
+  <meta content="Boosternesia Employee Management" property="article:author"/>
   <meta content="summary_large_image" name="twitter:card"/>
   <meta content="@mycodingxd" name="twitter:site"/>
   <meta content="@mycodingxd" name="twitter:creator"/>
   <meta content="http://localhost:80/absensi/absensi/index" property="twitter:url"/>
-  <meta content="Absensi Online - Foto Selfie & Auto Detect Lokasi" property="twitter:title"/>
+  <meta content="Boosternesia Employee Management" property="twitter:title"/>
   <meta content="Aplikasi Sistem Absensi Online Berbasis Foto Selfie dan Auto Detect Lokasi. Absen Karyawan Kini Jadi Lebih Efisien. Sistem absensi dengan verifikasi foto selfie atau webcam, dilengkapi fitur deteksi lokasi pengguna yang akurat." property="twitter:description"/>
   <meta content="content/logo/absensionline.jpg" property="twitter:image"/>
 
@@ -50,9 +50,9 @@
   <link href="http://localhost:80/absensi/manifest.json" rel="manifest"/>
   <meta content="http://localhost:80/absensi" name="msapplication-starturl"/>
   <meta content="http://localhost:80/absensi" name="start_url"/>
-  <meta content="Absensi Online - Foto Selfie & Auto Detect Lokasi" name="application-name"/>
-  <meta content="Absensi Online - Foto Selfie & Auto Detect Lokasi" name="apple-mobile-web-app-title"/>
-  <meta content="Absensi Online - Foto Selfie & Auto Detect Lokasi" name="msapplication-tooltip"/>
+  <meta content="Boosternesia Employee Management" name="application-name"/>
+  <meta content="Boosternesia Employee Management" name="apple-mobile-web-app-title"/>
+  <meta content="Boosternesia Employee Management" name="msapplication-tooltip"/>
   <meta content="#00B4FF" name="theme_color"/>
   <meta content="#00B4FF" name="theme-color"/>
   <meta content="#FFFFFF" name="background_color"/>
@@ -65,18 +65,18 @@
   <meta content="yes" name="apple-touch-fullscreen"/>
   <link href="http://localhost:80/absensi/favicon.png" rel="apple-touch-icon"/>
   <link href="http://localhost:80/absensi/favicon.png" rel="shortcut icon" type="image/x-icon"/>
-  <link href="content/logo/absensionline32.png" rel="icon" sizes="32x32"/>
-  <meta content="content/logo/absensionline144.png" name="msapplication-TileImage"/>
-  <link href="content/logo/absensionline180.png" rel="apple-touch-icon"/>
-  <link href="content/logo/absensionline48.png" rel="icon" sizes="48x48"/>
-  <link href="content/logo/absensionline72.png" rel="icon" sizes="72x72"/>
-  <link href="content/logo/absensionline96.png" rel="icon" sizes="96x96"/>
-  <link href="content/logo/absensionline168.png" rel="icon" sizes="168x168"/>
-  <link href="content/logo/absensionline192.png" rel="icon" sizes="192x192"/>
-  <link href="content/logo/absensionline512.png" rel="icon" sizes="512x512"/>
+  <link href="content/logo/boosternesia4.png" rel="icon" sizes="32x32"/>
+  <meta content="content/logo/boosternesia4.png" name="msapplication-TileImage"/>
+  <link href="content/logo/boosternesia4.png" rel="apple-touch-icon"/>
+  <link href="content/logo/boosternesia4.png" rel="icon" sizes="48x48"/>
+  <link href="content/logo/boosternesia4.png" rel="icon" sizes="72x72"/>
+  <link href="content/logo/boosternesia4.png" rel="icon" sizes="96x96"/>
+  <link href="content/logo/boosternesia4.png" rel="icon" sizes="168x168"/>
+  <link href="content/logo/boosternesia4.png" rel="icon" sizes="192x192"/>
+  <link href="content/logo/boosternesia4.png" rel="icon" sizes="512x512"/>
 
   <!--Author-->
-  <meta content="Absensi Online - Foto Selfie & Auto Detect Lokasi" name="author" />
+  <meta content="Boosternesia Employee Management" name="author" />
   <meta content="401XD Group" name="publisher"/>
 
   <!--verification-->
@@ -126,7 +126,7 @@
             </a>
         </div>
         <div class="pageTitle">
-            <img src="content/logo-absensipng.png" alt="logo" class="logo">
+            <img src="content/headerweb.png" alt="logo" class="logo">
         </div>
         <div class="right">
             <div class="headerButton" data-toggle="dropdown" id="dropdownMenuLink" aria-haspopup="true">

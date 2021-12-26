@@ -15,17 +15,17 @@
   <link href="pegawai/absensi/index.php" rel="canonical"/>
 
   <!--Title-->
-  <title>Absensi Online - Foto Selfie & Auto Detect Lokasi</title>
-  <meta name="description" content="Halaman Pengguna Absensi Online - Foto Selfie & Auto Detect Lokasi, Aplikasi Sistem Absensi Online Berbasis Foto Selfie dan Auto Detect Lokasi. Absen Karyawan Kini Jadi Lebih Efisien. Sistem absensi dengan verifikasi foto selfie atau webcam, dilengkapi fitur deteksi lokasi pengguna yang akurat."/>
+  <title>Boosternesia Employee Management</title>
+  <meta name="description" content="Halaman Pengguna Boosternesia Employee Management, Aplikasi Sistem Absensi Online Berbasis Foto Selfie dan Auto Detect Lokasi. Absen Karyawan Kini Jadi Lebih Efisien. Sistem absensi dengan verifikasi foto selfie atau webcam, dilengkapi fitur deteksi lokasi pengguna yang akurat."/>
   <meta name="keywords" content="absensi online, aplikasi absensi, aplikasi absensi online, sistem absensi online, absensi online pemerintah, absensi online perusahaan"/>
 
   <!--OG-->
   <meta content="website" property="og:type"/>
-  <meta content="Absensi Online - Foto Selfie & Auto Detect Lokasi" property="og:title"/>
+  <meta content="Boosternesia Employee Management" property="og:title"/>
   <meta content="Aplikasi Sistem Absensi Online Berbasis Foto Selfie dan Auto Detect Lokasi. Absen Karyawan Kini Jadi Lebih Efisien. Sistem absensi dengan verifikasi foto selfie atau webcam, dilengkapi fitur deteksi lokasi pengguna yang akurat." property="og:description"/>
   <meta content="pegawai/absensi/index" property="og:url"/>
-  <meta content="Absensi Online - Foto Selfie & Auto Detect Lokasi" property="og:site_name"/>
-  <meta content="Absensi Online - Foto Selfie & Auto Detect Lokasi" property="og:headline"/>
+  <meta content="Boosternesia Employee Management" property="og:site_name"/>
+  <meta content="Boosternesia Employee Management" property="og:headline"/>
   <meta content="pegawai/content/logo/absensionline.jpg" property="og:image"/>
   <meta content="1920" property="og:image:width"/>
   <meta content="1080" property="og:image:height"/>
@@ -37,12 +37,12 @@
   <meta content="" property="fb:pages"/>
   <meta content="" property="fb:admins"/>
   <meta content="" property="fb:profile_id"/>
-  <meta content="Absensi Online - Foto Selfie & Auto Detect Lokasi" property="article:author"/>
+  <meta content="Boosternesia Employee Management" property="article:author"/>
   <meta content="summary_large_image" name="twitter:card"/>
   <meta content="@mycodingxd" name="twitter:site"/>
   <meta content="@mycodingxd" name="twitter:creator"/>
   <meta content="pegawai/absensi/index" property="twitter:url"/>
-  <meta content="Absensi Online - Foto Selfie & Auto Detect Lokasi" property="twitter:title"/>
+  <meta content="Boosternesia Employee Management" property="twitter:title"/>
   <meta content="Aplikasi Sistem Absensi Online Berbasis Foto Selfie dan Auto Detect Lokasi. Absen Karyawan Kini Jadi Lebih Efisien. Sistem absensi dengan verifikasi foto selfie atau webcam, dilengkapi fitur deteksi lokasi pengguna yang akurat." property="twitter:description"/>
   <meta content="pegawai/content/logo/absensionline.jpg" property="twitter:image"/>
 
@@ -50,9 +50,9 @@
   <link href="pegawai/manifest.json" rel="manifest"/>
   <meta content="pegawai" name="msapplication-starturl"/>
   <meta content="pegawai" name="start_url"/>
-  <meta content="Absensi Online - Foto Selfie & Auto Detect Lokasi" name="application-name"/>
-  <meta content="Absensi Online - Foto Selfie & Auto Detect Lokasi" name="apple-mobile-web-app-title"/>
-  <meta content="Absensi Online - Foto Selfie & Auto Detect Lokasi" name="msapplication-tooltip"/>
+  <meta content="Boosternesia Employee Management" name="application-name"/>
+  <meta content="Boosternesia Employee Management" name="apple-mobile-web-app-title"/>
+  <meta content="Boosternesia Employee Management" name="msapplication-tooltip"/>
   <meta content="#00B4FF" name="theme_color"/>
   <meta content="#00B4FF" name="theme-color"/>
   <meta content="#FFFFFF" name="background_color"/>
@@ -63,9 +63,9 @@
   <meta content="yes" name="apple-mobile-web-app-capable"/>
   <meta content="yes" name="mobile-web-app-capable"/>
   <meta content="yes" name="apple-touch-fullscreen"/>
-  <link href="pegawai/absensi/favicon.png" rel="apple-touch-icon"/>
-  <link href="pegawai/absensi/favicon.png" rel="shortcut icon" type="image/x-icon"/>
-  <link href="pegawai/absensi/content/logo/absensionline32.png" rel="icon" sizes="32x32"/>
+  <link href="pegawai/assets/favicon.png" rel="apple-touch-icon"/>
+  <link href="pegawai/assets/favicon.png" rel="shortcut icon" type="image/x-icon"/>
+  <link href="pegawai/content/logo/absensionline32.png" rel="icon" sizes="32x32"/>
   <meta content="pegawai/absensi/content/logo/absensionline144.png" name="msapplication-TileImage"/>
   <link href="pegawai/absensi/content/logo/absensionline180.png" rel="apple-touch-icon"/>
   <link href="pegawai/absensi/content/logo/absensionline48.png" rel="icon" sizes="48x48"/>
@@ -76,7 +76,7 @@
   <link href="pegawai/content/logo/absensionline512.png" rel="icon" sizes="512x512"/>
 
   <!--Author-->
-  <meta content="Absensi Online - Foto Selfie & Auto Detect Lokasi" name="author" />
+  <meta content="Boosternesia Employee Management" name="author" />
   <meta content="401XD Group" name="publisher"/>
 
   <!--verification-->
@@ -118,9 +118,8 @@
  
  <!-- App Capsule -->
     <div id="appCapsule">
-        <div style="background:#00B4FF;border-radius:30px;margin:0 16px;padding:10px 15px" class="section text-center">
-            <h1 style="color:#FFFFFF;font-size:24px;"><i class="fa fa-user"></i> Login</h1>
-            <img src="pegawai/content/logo-absensipng.png" height="70">
+        <div style="background:#222;border-radius:30px;margin:0 16px;padding:10px 15px" class="section text-center">
+            <img src="pegawai/content/headerweb.png" height="70">
             <h4 style="color:#FFFFFF;">Masukkan email dan password Anda untuk login ke sistem</h4>
         </div>
         <div class="section mb-5 p-2">
@@ -156,17 +155,17 @@
     <!-- * App Capsule -->
 <!-- ///////////// Js Files ////////////////////  -->
 <!-- Jquery -->
-<script src="http://localhost/absensi/mod/assets/js/lib/jquery-3.4.1.min.js"></script>
+<script src="pegawai/assets/js/lib/jquery-3.4.1.min.js"></script>
 <!-- Bootstrap-->
-<script src="http://localhost/absensi/mod/assets/js/lib/popper.min.js"></script>
-<script src="http://localhost/absensi/mod/assets/js/lib/bootstrap.min.js"></script>
+<script src="pegawai/assets/js/lib/popper.min.js"></script>
+<script src="pegawai/assets/js/lib/bootstrap.min.js"></script>
 <!-- Ionicons -->
 <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 <script src="https://kit.fontawesome.com/0ccb04165b.js" crossorigin="anonymous"></script>
 <!-- Base Js File -->
-<script src="http://localhost/absensi/mod/assets/js/base.js"></script>
-<script src="http://localhost/absensi/mod/assets/js/sweetalert.min.js"></script>
-<script src="http://localhost/absensi/mod/assets/js/webcamjs/webcam.min.js"></script>
-<script src="http://localhost/absensi//mod/assets/js/sw-script.js"></script>  <!-- </body></html> -->
+<script src="pegawai/assets/js/base.js"></script>
+<script src="pegawai/assets/js/sweetalert.min.js"></script>
+<script src="pegawai/assets/js/webcamjs/webcam.min.js"></script>
+<script src="pegawai/assets/js/sw-script.js"></script>  <!-- </body></html> -->
   </body>
 </html>

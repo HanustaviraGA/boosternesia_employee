@@ -26,7 +26,7 @@
         <a href="data_checkin.php" class="item">
             <div class="col">
                  <ion-icon name="document-text-outline"></ion-icon>
-                <strong>Riwayat</strong>
+                <strong>Riwayat Gaji</strong>
             </div>
         </a>
     </div>
