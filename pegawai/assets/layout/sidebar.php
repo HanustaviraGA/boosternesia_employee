@@ -28,14 +28,14 @@
                             </a>
                         </li>
                         <li>
-                            <a href="./profile" class="item">
+                            <a href="profil.php" class="item">
                                 <div class="icon-box bg-primary">
                                     <ion-icon name="person-outline"></ion-icon>
                                 </div> Profil
                             </a>
                         </li>
                         <li>
-                            <a href="./present" class="item">
+                            <a href="checkin.php" class="item">
                                 <div class="icon-box bg-primary">
                                     <ion-icon name="scan-outline"></ion-icon>
                                 </div> Absen
@@ -49,7 +49,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="./history" class="item">
+                            <a href="data_checkin.php" class="item">
                                 <div class="icon-box bg-primary">
                                     <ion-icon name="document-text-outline"></ion-icon>
                                 </div> Riwayat
