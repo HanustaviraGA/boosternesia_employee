@@ -319,7 +319,7 @@ http://www.templatemo.com/tm-509-hydro
   -----------------------------------------*/
 
   #home {
-    background: url('../images/boosternesia.jpeg') no-repeat center center;
+    background: url('../images/boosternesia1.jpg') no-repeat center center;
     background-size: cover;
     vertical-align: middle;
     display: -webkit-box;
@@ -480,7 +480,149 @@ http://www.templatemo.com/tm-509-hydro
     opacity: 1;
   }
 
+/*---------------------------------------
+      legalitas             
+  -----------------------------------------*/
 
+  #legalitas {
+    background: #f0f0f0;
+  }
+
+  #legalitas-header,
+  #legalitas-detail {
+    text-align: left;
+  }
+
+  #legalitas-header {
+    background: url('../images/legalitas.jpg') no-repeat center center;
+    background-size: cover;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 65vh;
+    color: #ffffff;
+    position: relative;
+    padding-top: 12em;
+  }
+
+  #legalitas-header h2 {
+    color: #ffffff;
+  }
+
+  .legalitas-thumb {
+    background: #ffffff;
+    -webkit-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    text-align: left;
+    margin-bottom: 30px;
+    height: 350px;
+  }
+
+  .media.legalitas-thumb .media-left {
+    width: 45%;
+  }
+
+  .legalitas-thumb small {
+    color: #ce3232;
+    font-weight: 500;
+    display: block;
+  }
+
+  .legalitas-thumb small .fa {
+    margin-right: 5px;
+  }
+
+  .legalitas-thumb h4 {
+    margin-top: 2px;
+    margin-bottom: 0px;
+  }
+
+  #legalitas-detail h2 {
+    padding: 25px 0 10px 0;
+  }
+
+  .legalitas-info {
+    padding: 75px 25px;
+  }
+
+  .legalitas-info h3 {
+    margin: 0;
+    padding: 8px 0 6px 0;
+    text-transform: capitalize;
+  }
+
+  .legalitas-info .section-btn {
+    background: #f0f0f0;
+    color: #393939;
+    margin-top: 20px;
+  }
+
+  .legalitas-info .section-btn:hover {
+    background: #00F260;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #ffffff;
+  }
+
+  .legalitas-thumb ul {
+    margin: 32px 12px 22px 0px;
+  }
+
+  .legalitas-thumb ul li {
+    list-style: square;
+    font-weight: normal;
+    padding: 4px 12px 4px 0px;
+  }
+
+  .legalitas-social-share {
+    text-align: center;
+    padding-top: 22px;
+  }
+
+  .legalitas-social-share .btn {
+    border-radius: 100px;
+    border: none;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin: 20px 6px;
+    padding: 10px 16px;
+  }
+
+  .legalitas-social-share .btn-primary {
+    background: #3b5998;
+  }
+
+  .legalitas-social-share .btn-success {
+    background: #1da1f2;
+  }
+
+  .legalitas-social-share .btn-danger {
+    background: #dd4b39;
+  }
+
+  .legalitas-social-share a .fa {
+    padding-right: 4px;
+  }
+
+  .legalitas-ads {
+    background: #f9f9f9;
+    border-right: 4px solid #2b2b2b;
+    padding: 42px;
+    text-align: center;
+    margin: 26px 0 26px 0;
+  }
+
+  .legalitas-ads h4 {
+    font-size: 18px;
+  }
 
   /*---------------------------------------
       BLOG             

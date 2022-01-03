@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-     <title>Boosternesia</title>
+     <title>Boosternesia - Beranda</title>
 <!-- 
 Hydro Template 
 http://www.templatemo.com/tm-509-hydro
