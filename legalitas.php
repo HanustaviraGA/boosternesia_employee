@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-     <title>Hydro - legalitas Page</title>
+     <title>Boosternesia - Legalitas</title>
 <!-- 
 Hydro Template 
 http://www.templatemo.com/tm-509-hydro
@@ -17,6 +17,7 @@ http://www.templatemo.com/tm-509-hydro
      <link rel="stylesheet" href="assets/css/bootstrap.min.css">
      <link rel="stylesheet" href="assets/css/magnific-popup.css">
      <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+     <link rel="icon" href="assets/images/boosternesia4.ico">
 
      <!-- MAIN CSS -->
      <link rel="stylesheet" href="assets/css/templatemo-style.css">
@@ -50,11 +51,10 @@ http://www.templatemo.com/tm-509-hydro
                <!-- MENU LINKS -->
                <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-nav-first">
-                         <li><a href="#home" class="smoothScroll">Beranda</a></li>
-                         <li><a href="#about" class="smoothScroll">Ringkasan</a></li>
-                         <li><a href="#legalitas" class="smoothScroll">Artikel</a></li>
-                         <li><a href="#work" class="smoothScroll">Tim Kami</a></li>
-                         <li><a href="#contact" class="smoothScroll">Kontak Kami</a></li>
+                         <li><a href="index.php#home" class="smoothScroll">Beranda</a></li>
+                         <li><a href="index.php#about" class="smoothScroll">Ringkasan</a></li>
+                         <li><a href="index.php#work" class="smoothScroll">Tim Kami</a></li>
+                         <li><a href="index.php#contact" class="smoothScroll">Kontak Kami</a></li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
@@ -98,7 +98,7 @@ http://www.templatemo.com/tm-509-hydro
 
                               <div class="legalitas-ads">
                                    <h4>
-                                        <embed src="assets/resources/sertifikat.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="100%" height="600px" />
+                                        <img src="assets/resources/sertifikat.png" type="image" width="100%" height="100%" />
                                    </h4>
                               </div>
                               
@@ -117,54 +117,56 @@ http://www.templatemo.com/tm-509-hydro
 
                     <div class="col-md-5 col-sm-12">
                          <div class="footer-thumb footer-info"> 
-                              <h2>Hydro Company</h2>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                              <h2>Boosternesia</h2>
+                              <p style="text-align:left">Boosternesia merupakan salah satu Lembaga Kursus dan Pelatihan yang bergerak di bidang pengembangan bahasa Inggris, serta program - program pendampingan beasiswa melalui koridor bahasa Inggris.</p>
                          </div>
                     </div>
 
                     <div class="col-md-2 col-sm-4"> 
                          <div class="footer-thumb"> 
-                              <h2>Company</h2>
+                              <h2>Perusahaan</h2>
                               <ul class="footer-link">
-                                   <li><a href="#">About Us</a></li>
-                                   <li><a href="#">Join our team</a></li>
-                                   <li><a href="#">Read legalitas</a></li>
-                                   <li><a href="#">Press</a></li>
+                                   <li><a href="index.php#about">Tentang Kami</a></li>
+                                   <li><a href="#">Lowongan Kerja</a></li>
+                                   <li><a href="#">Pengumuman</a></li>
                               </ul>
                          </div>
                     </div>
 
                     <div class="col-md-2 col-sm-4"> 
                          <div class="footer-thumb"> 
-                              <h2>Services</h2>
+                              <h2>Program</h2>
                               <ul class="footer-link">
-                                   <li><a href="#">Pricing</a></li>
-                                   <li><a href="#">Documentation</a></li>
-                                   <li><a href="#">Support</a></li>
+                                   <li><a href="#">Biaya</a></li>
+                                   <li><a href="#">Dokumentasi</a></li>
+                                   <li><a href="#">Dukungan</a></li>
+                                   <li><a href="legalitas.php">Legalitas</a></li>
                               </ul>
                          </div>
                     </div>
 
                     <div class="col-md-3 col-sm-4"> 
                          <div class="footer-thumb"> 
-                              <h2>Find us</h2>
-                              <p>123 Grand Rama IX, <br> Krung Thep Maha Nakhon 10400</p>
+                              <h2>Alamat</h2>
+                              <p>Menara Asia Afrika Lantai 9 <br> Jl. Asia Afrika No 133-137, Kota Bandung, Jawa Barat</p>
                          </div>
-                    </div>
+                    </div>                    
 
                     <div class="col-md-12 col-sm-12">
                          <div class="footer-bottom">
                               <div class="col-md-6 col-sm-5">
                                    <div class="copyright-text"> 
-                                        <p>Copyright &copy; 2017 Your Company</p>
+                                        <p>Hak Cipta &copy; 2022 PT. Pelopor Pendidikan Indonesia</p>
                                    </div>
                               </div>
                               <div class="col-md-6 col-sm-7">
-                                   <div class="phone-contact"> 
-                                        <p>Call us <span>(+66) 010-020-0340</span></p>
+                                   <div class="phone-contact">
+                                        <a href="wa.me/6285212145349"> 
+                                             <p>Hubungi Kami <span>(+62) 852-121-453-49</span></p>
+                                        </a>
                                    </div>
                                    <ul class="social-icon">
-                                        <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                                        <li><a href="https://www.facebook.com/templatemo" class="fa fa-facebook-square" attr="facebook icon"></a></li>
                                         <li><a href="#" class="fa fa-twitter"></a></li>
                                         <li><a href="#" class="fa fa-instagram"></a></li>
                                    </ul>

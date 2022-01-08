@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-     <title>Boosternesia - Beranda</title>
+     <title>Boosternesia - Tim Kami</title>
 <!-- 
 Hydro Template 
 http://www.templatemo.com/tm-509-hydro
@@ -51,10 +51,10 @@ http://www.templatemo.com/tm-509-hydro
                <!-- MENU LINKS -->
                <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-nav-first">
-                         <li><a href="#home" class="smoothScroll">Beranda</a></li>
-                         <li><a href="#about" class="smoothScroll">Ringkasan</a></li>
-                         <li><a href="#work" class="smoothScroll">Tim Kami</a></li>
-                         <li><a href="#contact" class="smoothScroll">Kontak Kami</a></li>
+                         <li><a href="index.php#home" class="smoothScroll">Beranda</a></li>
+                         <li><a href="index.php#about" class="smoothScroll">Ringkasan</a></li>
+                         <li><a href="index.php#work" class="smoothScroll">Tim Kami</a></li>
+                         <li><a href="index.php#contact" class="smoothScroll">Kontak Kami</a></li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
@@ -69,85 +69,14 @@ http://www.templatemo.com/tm-509-hydro
      </section>
 
 
-     <!-- HOME -->
-     <section id="home" data-stellar-background-ratio="0.5">
+     <!-- tim HEADER -->
+     <section id="tim-header" data-stellar-background-ratio="0.5">
           <div class="overlay"></div>
           <div class="container">
                <div class="row">
 
-                    <div class="col-md-6 col-sm-12">
-                         <div class="home-info">
-                              <h1>We Boost Education to Boost Generation</h1>
-                              <a href="#about" class="btn section-btn smoothScroll">Daftar Sekarang</a>
-                              <span>
-                                   Hubungi Kami (+62) 852-121-453-49
-                                   <small>Untuk informasi lebih lanjut</small>
-                              </span>
-                         </div>
-                    </div>
-
-                    <div class="col-md-6 col-sm-12">
-                         <div class="home-video">
-                              <div class="embed-responsive embed-responsive-16by9">
-                                   <iframe frameborder="0" loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-                                   src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAEz8F6UYIk&#x2F;watch?embed" allowfullscreen="allowfullscreen" allow="fullscreen; autoplay">
-                                   </iframe>
-                              </div>
-                         </div>
-                    </div>
-                    
-               </div>
-          </div>
-     </section>
-
-
-     <!-- ABOUT -->
-     <section id="about" data-stellar-background-ratio="0.5">
-          <div class="container">
-               <div class="row">
-
-                    <div class="col-md-5 col-sm-6">
-                         <div class="about-info">
-                              <div class="section-title">
-                                   <h2>Kenalan yuk</h2>
-                                   <span class="line-bar">...</span>
-                              </div>
-                              <p>Apa itu Boosternesia ? Boosternesia adalah sebuah lembaga kursus bahasa Inggris yang tentunya lebih dari sekedar lembaga kursus. Tahu nggak kenapa ?</p>
-                              <p>Karena kita juga bakal membimbingmu meraih cita - citamu sampai setinggi langit. Lewat mentoring beasiswa, kelas online, dan masih banyak lagi. Jadi, tunggu apalagi ?</p>
-                              <p>Daftarkan dirimu sekarang !</p>
-                         </div>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6">
-                         <div class="about-info skill-thumb">
-
-                              <strong>Kelas Online</strong>
-                                        <div class="progress">
-                                             <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
-                                        </div>
-
-                              <strong>Materi Online</strong>
-                                        <div class="progress">
-                                             <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
-                                        </div>
-
-                              <strong>Pelatihan Guru</strong>
-                                        <div class="progress">
-                                             <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
-                                        </div>
-
-                              <strong>Mentoring Beasiswa</strong>
-                                        <div class="progress">
-                                             <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
-                                        </div>
-
-                         </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-12">
-                         <div class="about-image">
-                              <img src="assets/images/about-image-dohan.jpg" class="img-responsive" alt="">
-                         </div>
+                    <div class="col-md-offset-1 col-md-5 col-sm-12">
+                         <h2>Tim Kami</h2>
                     </div>
                     
                </div>
@@ -159,7 +88,7 @@ http://www.templatemo.com/tm-509-hydro
           <div class="container">
                <div class="row">
 
-                    <div class="col-md-12 col-sm-12">
+               <div class="col-md-12 col-sm-12">
                          <div class="section-title">
                               <h2>Tim Kami</h2>
                               <span class="line-bar">...</span>
@@ -227,7 +156,7 @@ http://www.templatemo.com/tm-509-hydro
 
                <div class="row">
 
-                    <div class="col-md-12 col-sm-12">
+               <div class="col-md-12 col-sm-12">
                          <div class="section-title">
                               
                          </div>
@@ -288,11 +217,139 @@ http://www.templatemo.com/tm-509-hydro
                               </a>
                          </div>
                     </div>
+                    
                </div>
-               <br>
-               <br>
-               <br>
-               <a href="tim-kami.php" class="btn section-btn smoothScroll">Lihat Selengkapnya</a>
+
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title">
+                              
+                         </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                         <!-- WORK THUMB -->
+                         <div class="work-thumb">
+                              <a href="assets/images/work-image3.jpg" class="image-popup">
+                                   <img src="assets/images/work-image3.jpg" class="img-responsive" alt="Work">
+
+                                   <div class="work-info">
+                                        <h3>Aldi Rahmadiansyah</h3>
+                                        <small>Chief Technology Officer</small>
+                                   </div>
+                              </a>
+                         </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                         <!-- WORK THUMB -->
+                         <div class="work-thumb">
+                              <a href="assets/images/haura.png" class="image-popup">
+                                   <img src="assets/images/haura.png" class="img-responsive" alt="Work">
+
+                                   <div class="work-info">
+                                        <h3>Haura Nadiyah</h3>
+                                        <small>Manager of Program Organizer</small>
+                                   </div>
+                              </a>
+                         </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                         <!-- WORK THUMB -->
+                         <div class="work-thumb">
+                              <a href="assets/images/junita.png" class="image-popup">
+                                   <img src="assets/images/junita.png" class="img-responsive" alt="Work">
+
+                                   <div class="work-info">
+                                        <h3>Junita Veronica</h3>
+                                        <small>Secretary</small>
+                                   </div>
+                              </a>
+                         </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                         <!-- WORK THUMB -->
+                         <div class="work-thumb">
+                              <a href="assets/images/work-image3.jpg" class="image-popup">
+                                   <img src="assets/images/work-image3.jpg" class="img-responsive" alt="Work">
+
+                                   <div class="work-info">
+                                        <h3>Shireen Alfathunnisa</h3>
+                                        <small>Vice Secretary</small>
+                                   </div>
+                              </a>
+                         </div>
+                    </div>
+                    
+               </div>
+
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title">
+                              
+                         </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                         <!-- WORK THUMB -->
+                         <div class="work-thumb">
+                              <a href="assets/images/work-image3.jpg" class="image-popup">
+                                   <img src="assets/images/work-image3.jpg" class="img-responsive" alt="Work">
+
+                                   <div class="work-info">
+                                        <h3>Hana </h3>
+                                        <small>Manager of Content Creative</small>
+                                   </div>
+                              </a>
+                         </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                         <!-- WORK THUMB -->
+                         <div class="work-thumb">
+                              <a href="assets/images/work-image3.jpg" class="image-popup">
+                                   <img src="assets/images/work-image3.jpg" class="img-responsive" alt="Work">
+
+                                   <div class="work-info">
+                                        <h3>Celine </h3>
+                                        <small>Manager of Public Relation</small>
+                                   </div>
+                              </a>
+                         </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                         <!-- WORK THUMB -->
+                         <div class="work-thumb">
+                              <a href="assets/images/work-image3.jpg" class="image-popup">
+                                   <img src="assets/images/work-image3.jpg" class="img-responsive" alt="Work">
+
+                                   <div class="work-info">
+                                        <h3>Staffs</h3>
+                                   </div>
+                              </a>
+                         </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                         <!-- WORK THUMB -->
+                         <div class="work-thumb">
+                              <a href="assets/images/work-image3.jpg" class="image-popup">
+                                   <img src="assets/images/work-image3.jpg" class="img-responsive" alt="Work">
+
+                                   <div class="work-info">
+                                        <h3>And everyone !</h3>
+                                   </div>
+                              </a>
+                         </div>
+                    </div>
+                    
+               </div>
+
           </div>
      </section>
 
@@ -311,30 +368,29 @@ http://www.templatemo.com/tm-509-hydro
                     <div class="col-md-8 col-sm-8">
                         
                          <!-- CONTACT FORM HERE -->
-                         <form id="contact-form" role="form" action="form.php" method="POST">
+                         <form id="contact-form" role="form" action="#" method="post">
                               <div class="col-md-6 col-sm-6">
-                                   <input type="text" class="form-control" placeholder="Nama Lengkap" id="nama" name="nama" required="">
+                                   <input type="text" class="form-control" placeholder="Nama Lengkap" id="cf-name" name="cf-name" required="">
                               </div>
 
                               <div class="col-md-6 col-sm-6">
-                                   <input type="email" class="form-control" placeholder="Email" id="email" name="email" required="">
+                                   <input type="email" class="form-control" placeholder="Email" id="cf-email" name="cf-email" required="">
                               </div>
 
                               <div class="col-md-6 col-sm-6">
-                                   <input type="tel" class="form-control" placeholder="Nomor Telepon" id="telepon" name="telepon" required="">
+                                   <input type="tel" class="form-control" placeholder="Nomor Telepon" id="cf-number" name="cf-number" required="">
                               </div>
 
                               <div class="col-md-6 col-sm-6">
-                                   <input type="text" class="form-control" placeholder="Perihal" id="perihal" name="perihal" required="">
+                                   <input type="text" class="form-control" placeholder="Perihal" id="cf-number" name="cf-number" required="">
                               </div>
 
                               <div class="col-md-12 col-sm-12">
-                                   <textarea class="form-control" rows="6" placeholder="Isi pesan" id="isi" name="isi" required=""></textarea>
+                                   <textarea class="form-control" rows="6" placeholder="Isi pesan" id="cf-message" name="cf-message" required=""></textarea>
                               </div>
 
                               <div class="col-md-4 col-sm-12">
-                                   <input type="hidden" id="kontak" name="kontak" value="kontak">
-                                   <input type="submit" class="form-control" name="submit" id="submit" value="Kirim">
+                                   <input type="submit" class="form-control" name="submit" value="Kirim">
                               </div>
 
                          </form>
@@ -373,7 +429,7 @@ http://www.templatemo.com/tm-509-hydro
                          <div class="footer-thumb"> 
                               <h2>Perusahaan</h2>
                               <ul class="footer-link">
-                                   <li><a href="#about">Tentang Kami</a></li>
+                                   <li><a href="index.php#about">Tentang Kami</a></li>
                                    <li><a href="#">Lowongan Kerja</a></li>
                                    <li><a href="#">Pengumuman</a></li>
                               </ul>
@@ -425,6 +481,7 @@ http://www.templatemo.com/tm-509-hydro
           </div>
      </footer>
 
+
      <!-- MODAL -->
      <section class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-lg">
@@ -453,22 +510,35 @@ http://www.templatemo.com/tm-509-hydro
                                         <!-- TAB PANES -->
                                         <div class="tab-content">
                                              <div role="tabpanel" class="tab-pane fade in active" id="sign_up">
-                                                  <form action="form.php" method="POST">
-                                                       <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama Lengkap" required>
-                                                       <input type="telephone" class="form-control" name="telepon" id="telepon" placeholder="Nomor Telepon" required>
-                                                       <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
-                                                       <select class="form-control" id="kelas" name="kelas" placeholder="Fokus Level">
-                                                            <option value="Beginner Class">Beginner Class</option>
-                                                            <option value="Intermediate Class">Intermediate Class</option>
-                                                            <option value="Expert Class">Expert Class</option>
-                                                            <option value="Advanced Class">Advanced Class</option>
+                                                  <form action="#" method="post">
+                                                       <input type="text" class="form-control" name="name" placeholder="Nama Lengkap" required>
+                                                       <input type="telephone" class="form-control" name="telephone" placeholder="Nomor Telepon" required>
+                                                       <input type="email" class="form-control" name="email" placeholder="Email" required>
+                                                       <select class="form-control" id="cf-budgets" name="cf-budgets" placeholder="Fokus Level">
+                                                            <option>Beginner Class</option>
+                                                            <option>Intermediate Class</option>
+                                                            <option>Expert Class</option>
+                                                            <option>Advanced Class</option>
                                                        </select>
-                                                       <input type="hidden" name="daftar" id="daftar" value="daftar">
-                                                       <input type="submit" class="form-control" name="submit" id="submit" value="Kirim">
+                                                       <input type="submit" class="form-control" name="submit" value="Kirim">
+                                                  </form>
+                                             </div>
+
+                                             <div role="tabpanel" class="tab-pane fade in" id="sign_in">
+                                                  <form action="#" method="post">
+                                                       <input type="text" class="form-control" name="name" placeholder="Nama Lengkap" required>
+                                                       <input type="telephone" class="form-control" name="telephone" placeholder="Nomor Telepon" required>
+                                                       <input type="email" class="form-control" name="email" placeholder="Email" required>
+                                                       <select class="form-control" id="cf-budgets" name="cf-budgets" placeholder="Fokus Level">
+                                                            <option>Beginner Class</option>
+                                                            <option>Intermediate Class</option>
+                                                            <option>Expert Class</option>
+                                                            <option>Advanced Class</option>
+                                                       </select>
+                                                       <input type="submit" class="form-control" name="submit" value="Kirim">
                                                   </form>
                                              </div>
                                         </div>
-                                        
                                    </div>
 
                               </div>

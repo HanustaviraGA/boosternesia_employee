@@ -130,7 +130,7 @@
         </div>
         <div class="right">
             <div class="headerButton" data-toggle="dropdown" id="dropdownMenuLink" aria-haspopup="true">
-                <img src="content/karyawan/2021-06-2618e2999891374a475d0687ca9f989d83.jpg" alt="image" class="imaged w40">
+                <img src="content/karyawan/2022-06-2618e2999891374a475d0687ca9f989d83.jpg" alt="image" class="imaged w40">
                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">                <a class="dropdown-item" onclick="location.href='profile';" href="profile"><ion-icon size="small" name="person-outline"></ion-icon>Profil</a>
                 <a class="dropdown-item" onclick="location.href='logout';" href="logout"><ion-icon size="small" name="log-out-outline"></ion-icon>Keluar</a>
               </div>
@@ -206,12 +206,12 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>13 Desember 2021</td>
+                                        <td>13 Desember 2022</td>
                                         <td>14.30</td>
                                         <td>19.00</td>
                                     </tr>
                                     <tr>
-                                        <td>12 Desember 2021</td>
+                                        <td>12 Desember 2022</td>
                                         <td>13.30</td>
                                         <td>18.00</td>
                                     </tr>

@@ -5,7 +5,7 @@
                 <div class="modal-body p-0">
                     <!-- profile box -->
                     <div class="profileBox pt-2 pb-2">
-                        <div class="image-wrapper"><img src="content/karyawan/2021-06-2618e2999891374a475d0687ca9f989d83.jpg" class="imaged w36">
+                        <div class="image-wrapper"><img src="content/karyawan/2022-06-2618e2999891374a475d0687ca9f989d83.jpg" class="imaged w36">
                         </div>
                         <div class="in">
                             <strong>Badrul Juki</strong>

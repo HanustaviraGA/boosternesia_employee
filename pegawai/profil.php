@@ -127,7 +127,7 @@
         </div>
         <div class="right">
             <div class="headerButton" data-toggle="dropdown" id="dropdownMenuLink" aria-haspopup="true">
-                <img src="content/karyawan/2021-06-2618e2999891374a475d0687ca9f989d83.jpg" alt="image" class="imaged w40">
+                <img src="content/karyawan/2022-06-2618e2999891374a475d0687ca9f989d83.jpg" alt="image" class="imaged w40">
                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">                <a class="dropdown-item" onclick="location.href='profile';" href="profile"><ion-icon size="small" name="person-outline"></ion-icon>Profil</a>
                 <a class="dropdown-item" onclick="location.href='logout';" href="logout"><ion-icon size="small" name="log-out-outline"></ion-icon>Keluar</a>
               </div>
@@ -143,7 +143,7 @@
             <div class="avatar-section">
                 <input type="file" class="upload" name="file" id="avatar" accept=".jpg, .jpeg, ,gif, .png" capture="camera">
                 <a href="#">
-                    <img src="content/karyawan/2021-06-2618e2999891374a475d0687ca9f989d83.jpg" alt="avatar" class="imaged w100 rounded">
+                    <img src="content/karyawan/2022-06-2618e2999891374a475d0687ca9f989d83.jpg" alt="avatar" class="imaged w100 rounded">
                     <span class="button">
                         <ion-icon name="camera-outline"></ion-icon>
                     </span>

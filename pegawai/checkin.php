@@ -127,7 +127,7 @@
         </div>
         <div class="right">
             <div class="headerButton" data-toggle="dropdown" id="dropdownMenuLink" aria-haspopup="true">
-                <img src="content/karyawan/2021-06-2618e2999891374a475d0687ca9f989d83.jpg" alt="image" class="imaged w40">
+                <img src="content/karyawan/2022-06-2618e2999891374a475d0687ca9f989d83.jpg" alt="image" class="imaged w40">
                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">                <a class="dropdown-item" onclick="location.href='profile';" href="profile"><ion-icon size="small" name="person-outline"></ion-icon>Profil</a>
                 <a class="dropdown-item" onclick="location.href='logout';" href="logout"><ion-icon size="small" name="log-out-outline"></ion-icon>Keluar</a>
               </div>
@@ -149,13 +149,13 @@
                         <h4>Badrul Juki</h4>
                     </div>
                     <div class="right">
-                        <span class="title">13 Des 2021 </span>
+                        <span class="title">13 Des 2022 </span>
                         <h4><span class="clock"></span></h4>
                     </div>
 
                 </div>-->
                 <!-- * Balance -->
-                <!-- Wallet Footer --><div class="text-center"><h3>13 Des 2021 - <span class="clock"></span></h3></div>
+                <!-- Wallet Footer --><div class="text-center"><h3>13 Des 2022 - <span class="clock"></span></h3></div>
                 <div class="wallet-footer text-center">
                     <div class="webcam-capture-body text-center">
                         <span class="latitude d-none" id="latitude"></span>

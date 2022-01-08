@@ -6,8 +6,8 @@
 // ▪ http://instagram.com/MyCodingXD
 // ▪ http://facebook.com/MyCodingXD
 //
-// Hak cipta 2017-2021
-// Terakhir dikembangkan Juli 2021
+// Hak cipta 2017-2022
+// Terakhir dikembangkan Juli 2022
 
 header("location: /");
 ?>
