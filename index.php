@@ -53,14 +53,13 @@ http://www.templatemo.com/tm-509-hydro
                     <ul class="nav navbar-nav navbar-nav-first">
                          <li><a href="#home" class="smoothScroll">Beranda</a></li>
                          <li><a href="#about" class="smoothScroll">Ringkasan</a></li>
+                         <li><a href="#blog" class="smoothScroll">Dukungan</a></li>
                          <li><a href="#work" class="smoothScroll">Tim Kami</a></li>
                          <li><a href="#contact" class="smoothScroll">Kontak Kami</a></li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
-                         <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                         <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                         <li><a href="https://www.instagram.com/boosternesia.inc/"><i class="fa fa-instagram"></i></a></li>
                          <li class="section-btn"><a href="#" data-toggle="modal" data-target="#modal-form">Daftar Sekarang</a></li>
                     </ul>
                </div>
@@ -78,7 +77,7 @@ http://www.templatemo.com/tm-509-hydro
                     <div class="col-md-6 col-sm-12">
                          <div class="home-info">
                               <h1>We Boost Education to Boost Generation</h1>
-                              <a href="#about" class="btn section-btn smoothScroll">Daftar Sekarang</a>
+                              <a href="#" class="btn section-btn" data-toggle="modal" data-target="#modal-form">Daftar Sekarang</a>
                               <span>
                                    Hubungi Kami (+62) 852-121-453-49
                                    <small>Untuk informasi lebih lanjut</small>
@@ -150,6 +149,48 @@ http://www.templatemo.com/tm-509-hydro
                          </div>
                     </div>
                     
+               </div>
+          </div>
+     </section>
+
+     <!-- BLOG -->
+     <section id="blog" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title">
+                              <h2>Dukungan</h2>
+                              <span class="line-bar">...</span>
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- BLOG THUMB -->
+                         <div class="media blog-thumb" style="height: 250px;">
+                              <div class="media-object media-left">
+                                   <img src="assets/images/binus.png" class="img-responsive" alt="">
+                              </div>
+                              <div class="media-body blog-info">
+                                   <h3>Binus University</h3>
+                                   <p>Website, Aplikasi, dan Sistem Manajemen</p>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- BLOG THUMB -->
+                         <div class="media blog-thumb" style="height: 250px;">
+                              <div class="media-object media-left">
+                                   <img src="assets/images/usn.png" class="img-responsive" alt="">
+                              </div>
+                              <div class="media-body blog-info">
+                                   <h3>USN Kolaka</h3>
+                                   <p>Hak Kekayaan Intelektual, danPerizinan Kemdikbudristek</p>
+                              </div>
+                         </div>
+                    </div>
+
                </div>
           </div>
      </section>
@@ -386,7 +427,6 @@ http://www.templatemo.com/tm-509-hydro
                               <ul class="footer-link">
                                    <li><a href="#">Biaya</a></li>
                                    <li><a href="#">Dokumentasi</a></li>
-                                   <li><a href="#">Dukungan</a></li>
                                    <li><a href="legalitas.php">Legalitas</a></li>
                               </ul>
                          </div>
@@ -397,7 +437,7 @@ http://www.templatemo.com/tm-509-hydro
                               <h2>Alamat</h2>
                               <p>Menara Asia Afrika Lantai 9 <br> Jl. Asia Afrika No 133-137, Kota Bandung, Jawa Barat</p>
                          </div>
-                    </div>                    
+                    </div> 
 
                     <div class="col-md-12 col-sm-12">
                          <div class="footer-bottom">
@@ -408,14 +448,12 @@ http://www.templatemo.com/tm-509-hydro
                               </div>
                               <div class="col-md-6 col-sm-7">
                                    <div class="phone-contact">
-                                        <a href="wa.me/6285212145349"> 
+                                        <a href="https://wa.me/6285212145349"> 
                                              <p>Hubungi Kami <span>(+62) 852-121-453-49</span></p>
                                         </a>
                                    </div>
                                    <ul class="social-icon">
-                                        <li><a href="https://www.facebook.com/templatemo" class="fa fa-facebook-square" attr="facebook icon"></a></li>
-                                        <li><a href="#" class="fa fa-twitter"></a></li>
-                                        <li><a href="#" class="fa fa-instagram"></a></li>
+                                        <li><a href="https://www.instagram.com/boosternesia.inc/" class="fa fa-instagram"></a></li>
                                    </ul>
                               </div>
                          </div>

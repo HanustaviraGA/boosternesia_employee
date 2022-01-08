@@ -53,14 +53,13 @@ http://www.templatemo.com/tm-509-hydro
                     <ul class="nav navbar-nav navbar-nav-first">
                          <li><a href="index.php#home" class="smoothScroll">Beranda</a></li>
                          <li><a href="index.php#about" class="smoothScroll">Ringkasan</a></li>
+                         <li><a href="index.php#blog" class="smoothScroll">Dukungan</a></li>
                          <li><a href="index.php#work" class="smoothScroll">Tim Kami</a></li>
                          <li><a href="index.php#contact" class="smoothScroll">Kontak Kami</a></li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
-                         <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                         <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                         <li><a href="https://www.instagram.com/boosternesia.inc/"><i class="fa fa-instagram"></i></a></li>
                          <li class="section-btn"><a href="#" data-toggle="modal" data-target="#modal-form">Daftar Sekarang</a></li>
                     </ul>
                </div>
@@ -231,12 +230,12 @@ http://www.templatemo.com/tm-509-hydro
                     <div class="col-md-3 col-sm-6">
                          <!-- WORK THUMB -->
                          <div class="work-thumb">
-                              <a href="assets/images/work-image3.jpg" class="image-popup">
-                                   <img src="assets/images/work-image3.jpg" class="img-responsive" alt="Work">
+                              <a href="assets/images/aldi.png" class="image-popup">
+                                   <img src="assets/images/aldi.png" class="img-responsive" alt="Work">
 
                                    <div class="work-info">
                                         <h3>Aldi Rahmadiansyah</h3>
-                                        <small>Chief Technology Officer</small>
+                                        <small>Chief Data Officer</small>
                                    </div>
                               </a>
                          </div>
@@ -273,12 +272,12 @@ http://www.templatemo.com/tm-509-hydro
                     <div class="col-md-3 col-sm-6">
                          <!-- WORK THUMB -->
                          <div class="work-thumb">
-                              <a href="assets/images/work-image3.jpg" class="image-popup">
-                                   <img src="assets/images/work-image3.jpg" class="img-responsive" alt="Work">
+                              <a href="assets/images/rhya.png" class="image-popup">
+                                   <img src="assets/images/rhya.png" class="img-responsive" alt="Work">
 
                                    <div class="work-info">
-                                        <h3>Shireen Alfathunnisa</h3>
-                                        <small>Vice Secretary</small>
+                                        <h3>Lailatul Qomariah</h3>
+                                        <small>Advisor</small>
                                    </div>
                               </a>
                          </div>
@@ -301,8 +300,8 @@ http://www.templatemo.com/tm-509-hydro
                                    <img src="assets/images/work-image3.jpg" class="img-responsive" alt="Work">
 
                                    <div class="work-info">
-                                        <h3>Hana </h3>
-                                        <small>Manager of Content Creative</small>
+                                        <h3>Shireen Alfathunnisa</h3>
+                                        <small>Vice Secretary</small>
                                    </div>
                               </a>
                          </div>
@@ -429,7 +428,7 @@ http://www.templatemo.com/tm-509-hydro
                          <div class="footer-thumb"> 
                               <h2>Perusahaan</h2>
                               <ul class="footer-link">
-                                   <li><a href="index.php#about">Tentang Kami</a></li>
+                                   <li><a href="#about">Tentang Kami</a></li>
                                    <li><a href="#">Lowongan Kerja</a></li>
                                    <li><a href="#">Pengumuman</a></li>
                               </ul>
@@ -442,7 +441,6 @@ http://www.templatemo.com/tm-509-hydro
                               <ul class="footer-link">
                                    <li><a href="#">Biaya</a></li>
                                    <li><a href="#">Dokumentasi</a></li>
-                                   <li><a href="#">Dukungan</a></li>
                                    <li><a href="legalitas.php">Legalitas</a></li>
                               </ul>
                          </div>
@@ -453,7 +451,7 @@ http://www.templatemo.com/tm-509-hydro
                               <h2>Alamat</h2>
                               <p>Menara Asia Afrika Lantai 9 <br> Jl. Asia Afrika No 133-137, Kota Bandung, Jawa Barat</p>
                          </div>
-                    </div>                    
+                    </div> 
 
                     <div class="col-md-12 col-sm-12">
                          <div class="footer-bottom">
@@ -464,14 +462,12 @@ http://www.templatemo.com/tm-509-hydro
                               </div>
                               <div class="col-md-6 col-sm-7">
                                    <div class="phone-contact">
-                                        <a href="wa.me/6285212145349"> 
+                                        <a href="https://wa.me/6285212145349"> 
                                              <p>Hubungi Kami <span>(+62) 852-121-453-49</span></p>
                                         </a>
                                    </div>
                                    <ul class="social-icon">
-                                        <li><a href="https://www.facebook.com/templatemo" class="fa fa-facebook-square" attr="facebook icon"></a></li>
-                                        <li><a href="#" class="fa fa-twitter"></a></li>
-                                        <li><a href="#" class="fa fa-instagram"></a></li>
+                                        <li><a href="https://www.instagram.com/boosternesia.inc/" class="fa fa-instagram"></a></li>
                                    </ul>
                               </div>
                          </div>
@@ -510,35 +506,22 @@ http://www.templatemo.com/tm-509-hydro
                                         <!-- TAB PANES -->
                                         <div class="tab-content">
                                              <div role="tabpanel" class="tab-pane fade in active" id="sign_up">
-                                                  <form action="#" method="post">
-                                                       <input type="text" class="form-control" name="name" placeholder="Nama Lengkap" required>
-                                                       <input type="telephone" class="form-control" name="telephone" placeholder="Nomor Telepon" required>
-                                                       <input type="email" class="form-control" name="email" placeholder="Email" required>
-                                                       <select class="form-control" id="cf-budgets" name="cf-budgets" placeholder="Fokus Level">
-                                                            <option>Beginner Class</option>
-                                                            <option>Intermediate Class</option>
-                                                            <option>Expert Class</option>
-                                                            <option>Advanced Class</option>
+                                                  <form action="form.php" method="POST">
+                                                       <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama Lengkap" required>
+                                                       <input type="telephone" class="form-control" name="telepon" id="telepon" placeholder="Nomor Telepon" required>
+                                                       <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                                                       <select class="form-control" id="kelas" name="kelas" placeholder="Fokus Level">
+                                                            <option value="Beginner Class">Beginner Class</option>
+                                                            <option value="Intermediate Class">Intermediate Class</option>
+                                                            <option value="Expert Class">Expert Class</option>
+                                                            <option value="Advanced Class">Advanced Class</option>
                                                        </select>
-                                                       <input type="submit" class="form-control" name="submit" value="Kirim">
-                                                  </form>
-                                             </div>
-
-                                             <div role="tabpanel" class="tab-pane fade in" id="sign_in">
-                                                  <form action="#" method="post">
-                                                       <input type="text" class="form-control" name="name" placeholder="Nama Lengkap" required>
-                                                       <input type="telephone" class="form-control" name="telephone" placeholder="Nomor Telepon" required>
-                                                       <input type="email" class="form-control" name="email" placeholder="Email" required>
-                                                       <select class="form-control" id="cf-budgets" name="cf-budgets" placeholder="Fokus Level">
-                                                            <option>Beginner Class</option>
-                                                            <option>Intermediate Class</option>
-                                                            <option>Expert Class</option>
-                                                            <option>Advanced Class</option>
-                                                       </select>
-                                                       <input type="submit" class="form-control" name="submit" value="Kirim">
+                                                       <input type="hidden" name="daftar" id="daftar" value="daftar">
+                                                       <input type="submit" class="form-control" name="submit" id="submit" value="Kirim">
                                                   </form>
                                              </div>
                                         </div>
+                                        
                                    </div>
 
                               </div>

@@ -814,6 +814,8 @@ http://www.templatemo.com/tm-509-hydro
   }
 
   .media.blog-thumb .media-left {
+    padding-left: 15px;
+    vertical-align: middle !important;
     width: 45%;
   }
 
