@@ -186,7 +186,7 @@ http://www.templatemo.com/tm-509-hydro
                               </div>
                               <div class="media-body blog-info">
                                    <h3>USN Kolaka</h3>
-                                   <p>Hak Kekayaan Intelektual, danPerizinan Kemdikbudristek</p>
+                                   <p>Perizinan Lembaga Pendidikan ke Kemdikbudristek</p>
                               </div>
                          </div>
                     </div>
