@@ -125,7 +125,7 @@ http://www.templatemo.com/tm-509-hydro
                          <div class="footer-thumb"> 
                               <h2>Perusahaan</h2>
                               <ul class="footer-link">
-                                   <li><a href="#about">Tentang Kami</a></li>
+                                   <li><a href="index.php#about">Tentang Kami</a></li>
                                    <li><a href="#">Lowongan Kerja</a></li>
                                    <li><a href="#">Pengumuman</a></li>
                               </ul>
