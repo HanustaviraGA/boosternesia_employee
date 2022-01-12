@@ -1,4 +1,13 @@
-
+<?php
+    include 'koneksi.php';
+    session_start();
+    session_regenerate_id(true);
+    if(isset($_SESSION['pegawai'])){
+        
+    }else if(!isset($_SESSION['pegawai'])){
+        header('Location: login.php');
+    }
+?>
 
 <!DOCTYPE html>
 <html lang="id-ID" xml:lang="id-ID">
@@ -127,9 +136,9 @@
         </div>
         <div class="right">
             <div class="headerButton" data-toggle="dropdown" id="dropdownMenuLink" aria-haspopup="true">
-                <img src="content/karyawan/2022-06-2618e2999891374a475d0687ca9f989d83.jpg" alt="image" class="imaged w40">
-               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">                <a class="dropdown-item" onclick="location.href='profile';" href="profile"><ion-icon size="small" name="person-outline"></ion-icon>Profil</a>
-                <a class="dropdown-item" onclick="location.href='logout';" href="logout"><ion-icon size="small" name="log-out-outline"></ion-icon>Keluar</a>
+                <img src="assets/img/<?= $_SESSION['img'];?>" alt="image" class="imaged w40">
+               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">                <a class="dropdown-item" onclick="location.href='profil.php';" href="profil.php"><ion-icon size="small" name="person-outline"></ion-icon>Profil</a>
+                <a class="dropdown-item" onclick="location.href='controller.php?aksi=logout';" href="controller.php?aksi=logout"><ion-icon size="small" name="log-out-outline"></ion-icon>Keluar</a>
               </div>
             </div>
         </div>
@@ -143,7 +152,7 @@
             <div class="avatar-section">
                 <input type="file" class="upload" name="file" id="avatar" accept=".jpg, .jpeg, ,gif, .png" capture="camera">
                 <a href="#">
-                    <img src="content/karyawan/2022-06-2618e2999891374a475d0687ca9f989d83.jpg" alt="avatar" class="imaged w100 rounded">
+                    <img src="assets/img/<?= $_SESSION['img'];?>" alt="avatar" class="imaged w100 rounded">
                     <span class="button">
                         <ion-icon name="camera-outline"></ion-icon>
                     </span>
@@ -158,8 +167,8 @@
                     <form id="update-profile">
                         <div class="form-group boxed">
                             <div class="input-wrapper">
-                                <label class="label" for="text4">Username</label>
-                                <input type="text" class="form-control" value="badruljuki" style="background:#eeeeee" disabled readonly>
+                                <label class="label" for="text4">Nomor ID</label>
+                                <input type="text" class="form-control" value="<?= base64_decode($_SESSION['no_id']);?>" style="background:#eeeeee" disabled readonly>
                                 <i class="clear-input">
                                     <ion-icon name="close-circle"></ion-icon>
                                 </i>
@@ -168,8 +177,8 @@
 
                         <div class="form-group boxed">
                             <div class="input-wrapper">
-                                <label class="label" for="email4">Nama</label>
-                                <input type="text" class="form-control" id="name" name="employees_name" value="Badrul Juki" required>
+                                <label class="label" for="text4">Kode</label>
+                                <input type="text" class="form-control" value="<?= $_SESSION['kode'];?>" style="background:#eeeeee" disabled readonly>
                                 <i class="clear-input">
                                     <ion-icon name="close-circle"></ion-icon>
                                 </i>
@@ -178,20 +187,43 @@
 
                         <div class="form-group boxed">
                             <div class="input-wrapper">
-                                <label class="label" for="select4">Jabatan</label>
-                                <select class="form-control custom-select" name="position_id"><option value="2">ACCOUNTING</option><option value="7" selected>MANAGER</option><option value="1">STAFF</option>
-                                </select>
+                                <label class="label" for="text4">Nama Lengkap</label>
+                                <input type="text" class="form-control" value="<?= $_SESSION['nama_lengkap'];?>" style="background:#eeeeee" disabled readonly>
+                                <i class="clear-input">
+                                    <ion-icon name="close-circle"></ion-icon>
+                                </i>
                             </div>
                         </div>
 
                         <div class="form-group boxed">
                             <div class="input-wrapper">
-                                <label class="label" for="select4">Shift</label>
-                                <select class="form-control custom-select" name="shift_id"><option value="5" selected>FULL TIME</option><option value="4">SHIFT PAGI</option><option value="3">SHIFT SIANG</option>
-                                </select>
+                                <label class="label" for="text4">Tempat Lahir</label>
+                                <input type="text" class="form-control" value="<?= base64_decode($_SESSION['tempat_lahir']);?>" style="background:#eeeeee" disabled readonly>
+                                <i class="clear-input">
+                                    <ion-icon name="close-circle"></ion-icon>
+                                </i>
                             </div>
                         </div>
 
+                        <div class="form-group boxed">
+                            <div class="input-wrapper">
+                                <label class="label" for="text4">Tanggal Lahir</label>
+                                <input type="text" class="form-control" value="DUMMY" style="background:#eeeeee" disabled readonly>
+                                <i class="clear-input">
+                                    <ion-icon name="close-circle"></ion-icon>
+                                </i>
+                            </div>
+                        </div>
+
+                        <div class="form-group boxed">
+                            <div class="input-wrapper">
+                                <label class="label" for="text4">Jabatan</label>
+                                <input type="text" class="form-control" value="<?= $_SESSION['jabatan'];?>" style="background:#eeeeee" disabled readonly>
+                                <i class="clear-input">
+                                    <ion-icon name="close-circle"></ion-icon>
+                                </i>
+                            </div>
+                        </div>
 
                         <div class="form-group boxed">
                             <div class="input-wrapper">

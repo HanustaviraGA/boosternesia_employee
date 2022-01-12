@@ -5,11 +5,11 @@
                 <div class="modal-body p-0">
                     <!-- profile box -->
                     <div class="profileBox pt-2 pb-2">
-                        <div class="image-wrapper"><img src="content/karyawan/2022-06-2618e2999891374a475d0687ca9f989d83.jpg" class="imaged w36">
+                        <div class="image-wrapper"><img src="assets/img/<?= $_SESSION['img'];?>" class="imaged w36">
                         </div>
                         <div class="in">
-                            <strong>Badrul Juki</strong>
-                            <div class="text-muted">badruljuki</div>
+                            <strong><?= $_SESSION['nama_lengkap'];?></strong>
+                            <div class="text-muted"><?= base64_decode($_SESSION['no_id']);?></div>
                         </div>
                         <a href="#" class="btn btn-link btn-icon sidebar-close" data-dismiss="modal">
                             <ion-icon name="close-outline"></ion-icon>

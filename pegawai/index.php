@@ -1,4 +1,13 @@
-
+<?php
+    include 'koneksi.php';
+    session_start();
+    session_regenerate_id(true);
+    if(isset($_SESSION['pegawai'])){
+        
+    }else if(!isset($_SESSION['pegawai'])){
+        header('Location: login.php');
+    }
+?>
 
 <!DOCTYPE html>
 <html lang="id-ID" xml:lang="id-ID">
@@ -130,9 +139,9 @@
         </div>
         <div class="right">
             <div class="headerButton" data-toggle="dropdown" id="dropdownMenuLink" aria-haspopup="true">
-                <img src="content/karyawan/2022-06-2618e2999891374a475d0687ca9f989d83.jpg" alt="image" class="imaged w40">
-               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">                <a class="dropdown-item" onclick="location.href='profile';" href="profile"><ion-icon size="small" name="person-outline"></ion-icon>Profil</a>
-                <a class="dropdown-item" onclick="location.href='logout';" href="logout"><ion-icon size="small" name="log-out-outline"></ion-icon>Keluar</a>
+                <img src="assets/img/<?= $_SESSION['img'];?>" alt="image" class="imaged w40">
+               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">                <a class="dropdown-item" onclick="location.href='profil.php';" href="profil.php"><ion-icon size="small" name="person-outline"></ion-icon>Profil</a>
+                <a class="dropdown-item" onclick="location.href='controller.php?aksi=logout';" href="controller.php?aksi=logout"><ion-icon size="small" name="log-out-outline"></ion-icon>Keluar</a>
               </div>
             </div>
         </div>
@@ -148,8 +157,21 @@
                         <!-- Balance -->
                         <div class="balance">
                             <div class="left">
-                                <span class="title"> Selamat Malam</span>
-                                <h1 class="total">Badrul Juki</h1>
+                                <?php 
+                                    $datetime = date_default_timezone_set('Asia/Jakarta');
+                                    $time = date("H");
+                                ?>
+                                <?php if($time < "12") { ?>
+                                    <span class="title"> Selamat Pagi</span>
+                                <?php } else if ($time >= "12" && $time < "17") { ?>
+                                    <span class="title"> Selamat Siang</span>
+                                <?php } else if ($time >= "17" && $time < "19") { ?>
+                                    <span class="title"> Selamat Sore</span>
+                                <?php } else if($time >= "19") { ?>
+                                    <span class="title"> Selamat Malam</span>
+                                <?php } ?>
+                                
+                                <h1 class="total"><?= $_SESSION['nama_lengkap'];?></h1>
                             </div>
                         </div>
                         <!-- * Balance -->

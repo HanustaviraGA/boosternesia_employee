@@ -1,4 +1,13 @@
-
+<?php
+    include 'koneksi.php';
+    session_start();
+    session_regenerate_id(true);
+    if(isset($_SESSION['pegawai'])){
+        header('Location: index.php');
+    }else if(!isset($_SESSION['pegawai'])){
+        
+    }
+?>
 
 <!DOCTYPE html>
 <html lang="id-ID" xml:lang="id-ID">
@@ -44,7 +53,7 @@
   <meta content="pegawai/absensi/index" property="twitter:url"/>
   <meta content="Boosternesia Employee Management" property="twitter:title"/>
   <meta content="Aplikasi Sistem Absensi Online Berbasis Foto Selfie dan Auto Detect Lokasi. Absen Karyawan Kini Jadi Lebih Efisien. Sistem absensi dengan verifikasi foto selfie atau webcam, dilengkapi fitur deteksi lokasi pengguna yang akurat." property="twitter:description"/>
-  <meta content="pegawai/content/logo/absensionline.jpg" property="twitter:image"/>
+  <meta content="content/logo/absensionline.jpg" property="twitter:image"/>
 
   <!--Webapp-->
   <link href="pegawai/manifest.json" rel="manifest"/>
@@ -63,17 +72,17 @@
   <meta content="yes" name="apple-mobile-web-app-capable"/>
   <meta content="yes" name="mobile-web-app-capable"/>
   <meta content="yes" name="apple-touch-fullscreen"/>
-  <link href="pegawai/assets/favicon.png" rel="apple-touch-icon"/>
-  <link href="pegawai/assets/favicon.png" rel="shortcut icon" type="image/x-icon"/>
-  <link href="pegawai/content/logo/absensionline32.png" rel="icon" sizes="32x32"/>
-  <meta content="pegawai/absensi/content/logo/absensionline144.png" name="msapplication-TileImage"/>
-  <link href="pegawai/absensi/content/logo/absensionline180.png" rel="apple-touch-icon"/>
-  <link href="pegawai/absensi/content/logo/absensionline48.png" rel="icon" sizes="48x48"/>
-  <link href="pegawai/content/logo/absensionline72.png" rel="icon" sizes="72x72"/>
-  <link href="pegawai/content/logo/absensionline96.png" rel="icon" sizes="96x96"/>
-  <link href="pegawai/content/logo/absensionline168.png" rel="icon" sizes="168x168"/>
-  <link href="pegawai/content/logo/absensionline192.png" rel="icon" sizes="192x192"/>
-  <link href="pegawai/content/logo/absensionline512.png" rel="icon" sizes="512x512"/>
+  <link href="assets/favicon.png" rel="apple-touch-icon"/>
+  <link href="assets/favicon.png" rel="shortcut icon" type="image/x-icon"/>
+  <link href="content/logo/absensionline32.png" rel="icon" sizes="32x32"/>
+  <meta content="content/logo/absensionline144.png" name="msapplication-TileImage"/>
+  <link href="content/logo/absensionline180.png" rel="apple-touch-icon"/>
+  <link href="content/logo/absensionline48.png" rel="icon" sizes="48x48"/>
+  <link href="content/logo/absensionline72.png" rel="icon" sizes="72x72"/>
+  <link href="content/logo/absensionline96.png" rel="icon" sizes="96x96"/>
+  <link href="content/logo/absensionline168.png" rel="icon" sizes="168x168"/>
+  <link href="content/logo/absensionline192.png" rel="icon" sizes="192x192"/>
+  <link href="content/logo/absensionline512.png" rel="icon" sizes="512x512"/>
 
   <!--Author-->
   <meta content="Boosternesia Employee Management" name="author" />
@@ -103,27 +112,31 @@
   <link href="//kit.fontawesome.com" rel="preconnect dns-prefetch"/>
 
   <!--CSS-->
-  <link rel="stylesheet" href="pegawai/assets/css/style.css">
-  <link rel="stylesheet" href="pegawai/assets/css/sw-custom.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/sw-custom.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <!-- Jquery -->
+  <script src="assets/js/lib/jquery-3.4.1.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
 </head>
 
 <body>
 <div class="loading"><div class="spinner-border text-primary" role="status"></div></div>
   <!-- loader -->
     <div id="loader">
-        <img src="pegawai/assets/img/Preloader.gif" alt="icon" class="loading-icon">
+        <img src="assets/img/Preloader.gif" alt="icon" class="loading-icon">
     </div>
     <!-- * loader -->
- 
+    
  <!-- App Capsule -->
     <div id="appCapsule">
         <div style="background:#222;border-radius:30px;margin:0 16px;padding:10px 15px" class="section text-center">
-            <img src="pegawai/content/headerweb.png" height="70">
+            <img src="content/headerweb.png" height="70">
             <h4 style="color:#FFFFFF;">Masukkan email dan password Anda untuk login ke sistem</h4>
         </div>
         <div class="section mb-5 p-2">
-            <form id="form-login">
+            <form action="controller.php?aksi=login" method="POST" id="form-login">
                 <div class="card">
                     <div class="card-body pb-1">
                         <div class="form-group basic">
@@ -145,27 +158,24 @@
                 </div>
 
                 <div class="form-button-group transparent">
-                   <button type="submit" class="btn btn-success btn-block"><ion-icon name="log-in"></ion-icon> Login</button>
+                   <button type="submit" id="submit" name="submit" class="btn btn-success btn-block"><ion-icon name="log-in"></ion-icon> Login</button>
                 </div>
-
             </form>
         </div>
 
     </div>
     <!-- * App Capsule -->
 <!-- ///////////// Js Files ////////////////////  -->
-<!-- Jquery -->
-<script src="pegawai/assets/js/lib/jquery-3.4.1.min.js"></script>
+
 <!-- Bootstrap-->
-<script src="pegawai/assets/js/lib/popper.min.js"></script>
-<script src="pegawai/assets/js/lib/bootstrap.min.js"></script>
+<script src="assets/js/lib/popper.min.js"></script>
+<script src="assets/js/lib/bootstrap.min.js"></script>
 <!-- Ionicons -->
 <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 <script src="https://kit.fontawesome.com/0ccb04165b.js" crossorigin="anonymous"></script>
 <!-- Base Js File -->
-<script src="pegawai/assets/js/base.js"></script>
-<script src="pegawai/assets/js/sweetalert.min.js"></script>
-<script src="pegawai/assets/js/webcamjs/webcam.min.js"></script>
-<script src="pegawai/assets/js/sw-script.js"></script>  <!-- </body></html> -->
+<script src="assets/js/base.js"></script>
+<script src="assets/js/sweetalert.min.js"></script>
+<script src="assets/js/webcamjs/webcam.min.js"></script>
   </body>
 </html>

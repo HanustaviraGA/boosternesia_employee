@@ -361,15 +361,6 @@ $('.btn-print').click(function (e) {
 });
 
 
-jQuery(function($) {
-  setInterval(function() {
-    var date = new Date(),
-        time = date.toLocaleTimeString();
-    $(".clock").html(time);
-  }, 1000);
-});
-
-
 /* ---------- Print -----------------*/
 function nWin(context,title) {
     var printWindow = window.open('', '');

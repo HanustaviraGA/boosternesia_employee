@@ -128,7 +128,7 @@
         <div class="right">
             <div class="headerButton" data-toggle="dropdown" id="dropdownMenuLink" aria-haspopup="true">
                 <img src="content/karyawan/2022-06-2618e2999891374a475d0687ca9f989d83.jpg" alt="image" class="imaged w40">
-               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">                <a class="dropdown-item" onclick="location.href='profile';" href="profile"><ion-icon size="small" name="person-outline"></ion-icon>Profil</a>
+               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">                <a class="dropdown-item" onclick="location.href='profil.php';" href="profil.php"><ion-icon size="small" name="person-outline"></ion-icon>Profil</a>
                 <a class="dropdown-item" onclick="location.href='logout';" href="logout"><ion-icon size="small" name="log-out-outline"></ion-icon>Keluar</a>
               </div>
             </div>
@@ -155,13 +155,23 @@
 
                 </div>-->
                 <!-- * Balance -->
-                <!-- Wallet Footer --><div class="text-center"><h3>13 Des 2022 - <span class="clock"></span></h3></div>
+                <?php
+                    $datetime = date_default_timezone_set('Asia/Jakarta'); 
+                    $date = date("Y-m-d");
+                    $time = date("H:i:s");
+                    $month = array('Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember');
+                    $tanggal_hari = (int)date('d', strtotime($date));
+                    $bulan_hari = $month[((int)date('m', strtotime($date))) - 1];
+                    $tahun_hari = (int)date('Y', strtotime($date));
+                ?>
+                <div class="text-center"><h3><span id="time"></span></h3></div>
                 <div class="wallet-footer text-center">
                     <div class="webcam-capture-body text-center">
-                        <span class="latitude d-none" id="latitude"></span>
-                        <div class="webcam-capture"></div>
+                        <p style="font-weight: bold;">Silahkan Check In</p>
+                        <textarea class="form-control" id="keterangan" name="keterangan" placeholder="Keterangan" required style="margin-top: 0px;margin-bottom: 0px;height: 96px;width: 100%;"></textarea>
+                        <br>
                         <div class="form-group basic">
-                        <button class="btn btn-success btn-lg btn-block" onClick="captureimage(0)"><ion-icon name="camera-outline"></ion-icon>Absen Masuk</button>
+                            <button class="btn btn-success btn-lg btn-block">Absen Masuk</button>
                         </div>
                     </div>
                 </div>
@@ -190,89 +200,15 @@
 <script src="assets/js/base.js"></script>
 <script src="assets/js/sweetalert.min.js"></script>
 <script src="assets/js/webcamjs/webcam.min.js"></script>
-<script src="assets/js/sw-script.js"></script><script type="text/javascript">
-   var result;
-    $(document).ready(function getLocation() {
-        result = document.getElementById("latitude");
-       // 
-        if(navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
-        } else {
-            swal({title: 'Oops!', text:'Maaf, browser Anda tidak mendukung geolokasi HTML5.', icon: 'error', timer: 3000,});
-        }
-    });
-    
-    // Define callback function for successful attempt
-    function successCallback(position) {
-       result.innerHTML =""+ position.coords.latitude + ","+position.coords.longitude + "";
-    }
-
-    // Define callback function for failed attempt
-    function errorCallback(error) {
-        if(error.code == 1) {
-            swal({title: 'Oops!', text:'Anda telah memutuskan untuk tidak membagikan posisi Anda, tetapi tidak apa-apa. Kami tidak akan meminta Anda lagi.', icon: 'error', timer: 3000,});
-        } else if(error.code == 2) {
-            swal({title: 'Oops!', text:'Jaringan tidak aktif atau layanan penentuan posisi tidak dapat dijangkau.', icon: 'error', timer: 3000,});
-        } else if(error.code == 3) {
-            swal({title: 'Oops!', text:'Waktu percobaan habis sebelum bisa mendapatkan data lokasi.', icon: 'error', timer: 3000,});
-        } else {
-            swal({title: 'Oops!', text:'Waktu percobaan habis sebelum bisa mendapatkan data lokasi.', icon: 'error', timer: 3000,});
-        }
-    }
-    
-    // start webcame
-    Webcam.set({
-        width: 590,height: 460,
-        image_format: 'jpeg',
-        jpeg_quality:80,
-    });
-
-    var cameras = new Array(); //create empty array to later insert available devices
-    navigator.mediaDevices.enumerateDevices() // get the available devices found in the machine
-    .then(function(devices) {
-        devices.forEach(function(device) {
-        var i = 0;
-            if(device.kind=== "videoinput"){ //filter video devices only
-                cameras[i]= device.deviceId; // save the camera id's in the camera array
-                i++;
-            }
-        });
-    })
-
-    Webcam.set('constraints',{
-        width: 590,
-        height: 460,
-        image_format: 'jpeg',
-        jpeg_quality:80,
-        sourceId: cameras[0]
-    });
-
-    Webcam.attach('.webcam-capture');
-    // preload shutter audio clip
-    var shutter = new Audio();
-    //shutter.autoplay = true;
-    shutter.src = navigator.userAgent.match(/Firefox/) ? 'assets/js/webcamjs/shutter.ogg' : 'assets/js/webcamjs/shutter.mp3';
-    function captureimage() {
-    var latitude = $('.latitude').html();
-        // play sound effect
-        shutter.play();
-        // take snapshot and get image data
-        Webcam.snap( function(data_uri) {
-            // display results in page
-            Webcam.upload(data_uri, './sw-proses?action=present&latitude='+latitude+'', function(code,text) {
-                $data       =''+text+'';
-                var results = $data.split("/");
-                $results = results[0];
-                $results2 = results[1];
-                if($results =='success'){
-                    swal({title: 'Berhasil!', text:$results2, icon: 'success', timer: 3500,});
-                    setTimeout("location.href = './';",3600);
-                }else{
-                    swal({title: 'Oops!', text:text, icon: 'error', timer: 3500,});
-                }
-            });    
-        } );
-    }
+<script type="text/javascript">
+var timestamp = '<?=date("H:i:s");?>';
+function updateTime(){
+  $('#time').html(Date(timestamp));
+  timestamp++;
+}
+$(function(){
+  setInterval(updateTime, 1000);
+});
 </script>
   <!-- </body></html> -->
   </body>
