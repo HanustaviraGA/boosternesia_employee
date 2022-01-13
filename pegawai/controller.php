@@ -3,6 +3,16 @@
     session_regenerate_id(true);
     include 'koneksi.php';
 
+    // PHPMailer Include
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
+    
+    require_once "assets/library/PHPMailer.php";
+    require_once "assets/library/Exception.php";
+    require_once "assets/library/OAuth.php";
+    require_once "assets/library/POP3.php";
+    require_once "assets/library/SMTP.php";
+
     $data = $_REQUEST;
 
     switch($data['aksi']){
@@ -132,7 +142,38 @@
             $pending = 'Pending';
             $header_pegawai->bind_param('sssss', $hash_id, $email, $hash_pw, $new_filename, $pending);
             $status_header_pegawai = $header_pegawai->execute();
-            if($status_pegawai == true && $status_header_pegawai == true){
+            
+            // PHPMailer Kirim Email verifikasi
+            $mail = new PHPMailer;
+        
+            //Enable SMTP debugging. 
+            //$mail->SMTPDebug = 3;                               
+            //Set PHPMailer to use SMTP.
+            $mail->isSMTP();            
+            //Set SMTP host name                          
+            $mail->Host = $_ENV['MAIL_HOST']; //host mail server
+            //Set this to true if SMTP host requires authentication to send email
+            $mail->SMTPAuth = true;                          
+            //Provide username and password     
+            $mail->Username = $_ENV['MAIL_USERNAME'];   //nama-email smtp          
+            $mail->Password = $_ENV['MAIL_PASSWORD'];           //password email smtp
+            //If SMTP requires TLS encryption then set it
+            $mail->SMTPSecure = "tls";                           
+            //Set TCP port to connect to 
+            $mail->Port = $_ENV['MAIL_PORT'];                                   
+        
+            $mail->From = "boosternesia@gmail.com"; //email pengirim
+            $mail->FromName = "Boosternesia IT Department"; //nama pengirim
+        
+            $mail->addAddress($email, $nama); //email penerima
+        
+            $mail->isHTML(true);
+        
+            $mail->Subject = 'Verifikasi Email Anda'; //subject
+            $mail->Body    = 'Halo '.$nama.' jangan lupa verifikasi email ya'; //isi email
+            $mail->AltBody = "Boosternesia"; //body email (optional)
+            
+            if($status_pegawai == true && $status_header_pegawai == true && $mail->send()){
                 header("location: register.php?pesan=sukses");
             }else{
                 header("location: register.php?pesan=gagal");
