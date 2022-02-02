@@ -178,7 +178,7 @@
                         <!-- Wallet Footer -->
                         <div class="wallet-footer">
                             <div class="item">
-                                <a href="./profile">
+                                <a href="profil.php">
                                     <div class="icon-wrapper bg-primary">
                                        <ion-icon name="person-outline"></ion-icon>
                                     </div>
@@ -186,7 +186,7 @@
                                 </a>
                             </div>
                             <div class="item">
-                                <a href="./present">
+                                <a href="checkin.php">
                                     <div class="icon-wrapper bg-success">
                                         <ion-icon name="camera-outline"></ion-icon>
                                     </div>
@@ -194,19 +194,11 @@
                                 </a>
                             </div>
                             <div class="item">
-                                <a href="./id-card">
-                                    <div class="icon-wrapper bg-warning">
-                                       <ion-icon name="id-card-outline"></ion-icon>
-                                    </div>
-                                    <strong>ID Card</strong>
-                                </a>
-                            </div>
-                            <div class="item">
-                                <a href="./history">
+                                <a href="data_salary.php">
                                     <div class="icon-wrapper bg-danger">
                                        <ion-icon name="document-text-outline"></ion-icon>
                                     </div>
-                                    <strong>Riwayat</strong>
+                                    <strong>Riwayat Gaji</strong>
                                 </a>
                             </div>
                         </div>
@@ -215,27 +207,27 @@
                 </div>
                 <!-- Wallet Card -->
                 <div class="section mt-2">
-                    <div class="section-title">Data Absensi</div>
+                    <div class="section-title">Pengumuman</div>
                     <div class="card">
                         <div class="table-responsive">
                             <table id="table_id" class="display">
                                 <thead>
                                     <tr>
+                                        <th>Perihal</th>
                                         <th>Tanggal</th>
-                                        <th>Jam Check In</th>
-                                        <th>Jam Check Out</th>
+                                        <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
+                                        <td>Rapat Internal</td>
                                         <td>13 Desember 2022</td>
-                                        <td>14.30</td>
-                                        <td>19.00</td>
+                                        <td><button class="btn btn-primary btn-lg btn-block">Baca</button></td>
                                     </tr>
                                     <tr>
+                                        <td>Rapat Internal</td>
                                         <td>12 Desember 2022</td>
-                                        <td>13.30</td>
-                                        <td>18.00</td>
+                                        <td><button class="btn btn-primary btn-lg btn-block">Baca</button></td>
                                     </tr>
                                 </tbody>
                             </table>

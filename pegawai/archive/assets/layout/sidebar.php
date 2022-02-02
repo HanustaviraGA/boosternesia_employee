@@ -42,17 +42,10 @@
                             </a>
                         </li>
                         <li>
-                            <a href="./id-card" class="item">
-                                <div class="icon-box bg-primary">
-                                  <ion-icon name="id-card-outline"></ion-icon>
-                                </div> ID Card
-                            </a>
-                        </li>
-                        <li>
                             <a href="data_checkin.php" class="item">
                                 <div class="icon-box bg-primary">
                                     <ion-icon name="document-text-outline"></ion-icon>
-                                </div> Riwayat
+                                </div> Riwayat Gaji
                             </a>
                         </li>
                         <li>

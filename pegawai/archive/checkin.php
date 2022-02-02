@@ -1,4 +1,13 @@
-
+<?php
+    include 'koneksi.php';
+    session_start();
+    session_regenerate_id(true);
+    if(isset($_SESSION['pegawai'])){
+        
+    }else if(!isset($_SESSION['pegawai'])){
+        header('Location: login.php');
+    }
+?>
 
 <!DOCTYPE html>
 <html lang="id-ID" xml:lang="id-ID">
@@ -106,6 +115,12 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/sw-custom.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <!-- Jquery -->
+  <script src="assets/js/lib/jquery-3.4.1.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+  <link rel="stylesheet" href="assets/js/plugins/datatables/dataTables.bootstrap.css">
 </head>
 
 <body>
@@ -127,9 +142,9 @@
         </div>
         <div class="right">
             <div class="headerButton" data-toggle="dropdown" id="dropdownMenuLink" aria-haspopup="true">
-                <img src="content/karyawan/2022-06-2618e2999891374a475d0687ca9f989d83.jpg" alt="image" class="imaged w40">
+                <img src="assets/img/<?= $_SESSION['img'];?>" alt="image" class="imaged w40">
                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">                <a class="dropdown-item" onclick="location.href='profil.php';" href="profil.php"><ion-icon size="small" name="person-outline"></ion-icon>Profil</a>
-                <a class="dropdown-item" onclick="location.href='logout';" href="logout"><ion-icon size="small" name="log-out-outline"></ion-icon>Keluar</a>
+                <a class="dropdown-item" onclick="location.href='controller.php?aksi=logout';" href="controller.php?aksi=logout"><ion-icon size="small" name="log-out-outline"></ion-icon>Keluar</a>
               </div>
             </div>
         </div>
@@ -167,12 +182,7 @@
                 <div class="text-center"><h3><span id="time"></span></h3></div>
                 <div class="wallet-footer text-center">
                     <div class="webcam-capture-body text-center">
-                        <p style="font-weight: bold;">Silahkan Check In</p>
-                        <textarea class="form-control" id="keterangan" name="keterangan" placeholder="Keterangan" required style="margin-top: 0px;margin-bottom: 0px;height: 96px;width: 100%;"></textarea>
-                        <br>
-                        <div class="form-group basic">
-                            <button class="btn btn-success btn-lg btn-block">Absen Masuk</button>
-                        </div>
+                        
                     </div>
                 </div>
                 <!-- * Wallet Footer -->
@@ -180,6 +190,40 @@
             </div>
         </div>
         <!-- Card -->
+            <div class="section mt-2">
+                    <div class="section-title">Data Absensi</div>
+                    <div class="card">
+                        <div class="table-responsive">
+                            <table id="table_id" class="display">
+                                <thead>
+                                    <tr>
+                                        <th>Tanggal</th>
+                                        <th>Kode</th>
+                                        <th>Check In</th>
+                                        <th>Check Out</th>
+                                        <th>Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>13 Desember 2022</td>
+                                        <td>A131222</td>
+                                        <td>14.30</td>
+                                        <td>19.00</td>
+                                        <td><button class="btn btn-primary btn-lg btn-block" id="swal_upload">IN</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>12 Desember 2022</td>
+                                        <td>A131222</td>
+                                        <td>13.30</td>
+                                        <td>18.00</td>
+                                        <td><button class="btn btn-primary btn-lg btn-block" id="swal_upload">IN</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
     </div>
     <!-- * App Capsule -->
 
@@ -188,8 +232,77 @@
     ?>
 <!-- * App Bottom Menu -->
 <!-- ///////////// Js Files ////////////////////  -->
-<!-- Jquery -->
-<script src="assets/js/lib/jquery-3.4.1.min.js"></script>
+<div class="modal fade" id="detailModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Detail</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group input-group">
+                        <span class="input-group-addon" style="width:150px;">ID Pelaporan</span>
+                        <input type="text" style="width:350px;" class="form-control" id="m_id_pelaporan">
+                    </div>
+                    <div class="form-group input-group">
+                        <span class="input-group-addon" style="width:150px;">Ticket</span>
+                        <input type="text" style="width:350px;" class="form-control" id="m_ticket">
+                    </div>
+                    <div class="form-group input-group">
+                        <span class="input-group-addon" style="width:150px;">Nama Lengkap</span>
+                        <input type="text" style="width:350px;" class="form-control" id="m_nama">
+                    </div>
+                    <div class="form-group input-group">
+                        <span class="input-group-addon" style="width:150px;">NIK</span>
+                        <input type="text" style="width:350px;" class="form-control" id="m_nik">
+                    </div>
+                    <div class="form-group input-group">
+                        <span class="input-group-addon" style="width:150px;">Unit Layanan</span>
+                        <input type="text" style="width:350px;" class="form-control" id="m_tujuan">
+                    </div>
+                    <div class="form-group input-group">
+                        <span class="input-group-addon" style="width:150px;">Keperluan</span>
+                        <input type="text" style="width:350px;" class="form-control" id="m_keperluan">
+                    </div>
+                    <div class="form-group input-group">
+                        <span class="input-group-addon" style="width:150px;">Keterangan</span>
+                        <input type="text" style="width:350px; height:auto;" class="form-control" id="m_keterangan">
+                    </div>
+                    <div class="form-group input-group">
+                        <span class="input-group-addon" style="width:150px;">Lampiran</span>
+                            <a href = "../berkas/" target="_blank" id="m_lampiran">
+                        </a>
+                    </div>
+                    <div class="form-group input-group">
+                        <span class="input-group-addon" style="width:150px;">Tanggal Pelaporan</span>
+                        <input type="text" style="width:350px;" class="form-control" id="m_tanggal_pelaporan">
+                    </div>
+                    <div class="form-group input-group">
+                        <span class="input-group-addon" style="width:150px;">Kabupaten / Kota</span>
+                        <input type="text" style="width:350px;" class="form-control" id="m_kabupaten_kota">
+                    </div>
+                    <div class="form-group input-group">
+                        <span class="input-group-addon" style="width:150px;">Kecamatan</span>
+                        <input type="text" style="width:350px;" class="form-control" id="m_kecamatan">
+                    </div>
+                    <div class="form-group input-group">
+                        <span class="input-group-addon" style="width:150px;">Kelurahan / Desa</span>
+                        <input type="text" style="width:350px;" class="form-control" id="m_kelurahan_desa">
+                    </div>
+                    <div class="form-group input-group">
+                        <span class="input-group-addon" style="width:150px;">Status</span>
+                        <input type="text" style="width:350px;" class="form-control" id="m_status">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
 <!-- Bootstrap-->
 <script src="assets/js/lib/popper.min.js"></script>
 <script src="assets/js/lib/bootstrap.min.js"></script>
@@ -209,6 +322,28 @@ function updateTime(){
 $(function(){
   setInterval(updateTime, 1000);
 });
+</script>
+<script>
+    $('#swal_upload').click(function() {
+        $('#detailModal').modal('show');
+})
+</script>
+<script src="assets/js/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="assets/js/plugins/datatables/dataTables.bootstrap.min.js"></script>
+<script>
+    $(document).ready( function () {
+    $('#table_id').DataTable();
+} );
+    // Disable search and ordering by default
+    $.extend( $.fn.dataTable.defaults, {
+        searching: false
+    } );
+    
+    // For this specific table we are going to enable ordering
+    // (searching is still disabled)
+    $('#table_id').DataTable( {
+        ordering: true
+    } );
 </script>
   <!-- </body></html> -->
   </body>

@@ -23,7 +23,7 @@
                 <strong>ID Card</strong>
             </div>
         </a>-->
-        <a href="data_checkin.php" class="item">
+        <a href="data_salary.php" class="item">
             <div class="col">
                  <ion-icon name="document-text-outline"></ion-icon>
                 <strong>Riwayat Gaji</strong>

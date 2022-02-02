@@ -1,4 +1,13 @@
-
+<?php
+    include 'koneksi.php';
+    session_start();
+    session_regenerate_id(true);
+    if(isset($_SESSION['pegawai'])){
+        
+    }else if(!isset($_SESSION['pegawai'])){
+        header('Location: login.php');
+    }
+?>
 
 <!DOCTYPE html>
 <html lang="id-ID" xml:lang="id-ID">
@@ -26,7 +35,7 @@
   <meta content="http://localhost:80/absensi/absensi/index" property="og:url"/>
   <meta content="Boosternesia Employee Management" property="og:site_name"/>
   <meta content="Boosternesia Employee Management" property="og:headline"/>
-  <meta content="content/logo/absensionline.jpg" property="og:image"/>
+  <meta content="http://localhost:80/absensi/content/logo/absensionline.jpg" property="og:image"/>
   <meta content="1920" property="og:image:width"/>
   <meta content="1080" property="og:image:height"/>
   <meta content="id_ID" property="og:locale"/>
@@ -106,12 +115,6 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/sw-custom.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-    <link rel="stylesheet" href="assets/js/plugins/datepicker/datepicker3.css">
-    <link rel="stylesheet" href="assets/js/plugins/datatables/dataTables.bootstrap.css">
-    <link rel="stylesheet" href="assets/js/plugins/magnific-popup/magnific-popup.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
-
 </head>
 
 <body>
@@ -133,9 +136,9 @@
         </div>
         <div class="right">
             <div class="headerButton" data-toggle="dropdown" id="dropdownMenuLink" aria-haspopup="true">
-                <img src="content/karyawan/2022-06-2618e2999891374a475d0687ca9f989d83.jpg" alt="image" class="imaged w40">
+                <img src="assets/img/<?= $_SESSION['img'];?>" alt="image" class="imaged w40">
                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">                <a class="dropdown-item" onclick="location.href='profil.php';" href="profil.php"><ion-icon size="small" name="person-outline"></ion-icon>Profil</a>
-                <a class="dropdown-item" onclick="location.href='logout';" href="logout"><ion-icon size="small" name="log-out-outline"></ion-icon>Keluar</a>
+                <a class="dropdown-item" onclick="location.href='controller.php?aksi=logout';" href="controller.php?aksi=logout"><ion-icon size="small" name="log-out-outline"></ion-icon>Keluar</a>
               </div>
             </div>
         </div>
@@ -145,136 +148,119 @@
     ?>
     <!-- App Capsule -->
     <div id="appCapsule">
-    </div>
+        <div class="section mt-3 text-center">
+            <div class="avatar-section">
+                <input type="file" class="upload" name="file" id="avatar" accept=".jpg, .jpeg, ,gif, .png" capture="camera">
+                <a href="#">
+                    <img src="assets/img/<?= $_SESSION['img'];?>" alt="avatar" class="imaged w100 rounded">
+                </a>
+            </div>
+        </div>
 
-        <div class="section mt-2">
-            <div class="section-title">Data Pembayaran Gaji</div>
+        <div class="section mt-2 mb-2">
+            <div class="section-title">Profil</div>
             <div class="card">
-                <div class="table-responsive">
-                    <table id="table_id" class="display">
-                        <thead>
-                            <tr>
-                                <th>Tanggal</th>
-                                <th>Nominal</th>
-                                <th>Jenis</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>13 Desember 2022</td>
-                                <td>Rp. 1.000.000</td>
-                                <td>Tunjangan Keluarga</td>
-                            </tr>
-                            <tr>
-                                <td>12 Desember 2022</td>
-                                <td>Rp. 500.000</td>
-                                <td>Gaji Pokok</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    
-
-        <!-- MODAL EXPLORE -->
-        <div class="modal fade action-sheet inset" id="modal-print" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Cetak / Explore</h5>
-                        <a href="javascript:void(0);" class="close" style="position: absolute;right:15px;top: 10px;"  data-dismiss="modal" aria-hidden="true"><ion-icon name="close-outline"></ion-icon></a>
-                    </div>
-                    <div class="modal-body">
-                        <div class="action-sheet-content">
-                            <div class="form-group basic">
-                                <div class="input-wrapper">
-                                    <label class="label">Pilih Tipe</label>
-                                    <select class="form-control custom-select type" name="type" required>
-                                       <option value="pdf">PDF</option>
-                                       <option value="excel">EXCEL</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="form-group basic">
-                                <button type="button" class="btn btn-primary btn-block mt-2 btn-print"><ion-icon name="print-outline"></ion-icon> Cetak</button>
+                <div class="card-body">
+                    <form id="update-profile">
+                        <div class="form-group boxed">
+                            <div class="input-wrapper">
+                                <label class="label" for="text4">Nomor ID</label>
+                                <input type="text" class="form-control" value="<?= base64_decode($_SESSION['no_id']);?>" style="background:#eeeeee" disabled readonly>
+                                <i class="clear-input">
+                                    <ion-icon name="close-circle"></ion-icon>
+                                </i>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-
-
-        <!-- UPDATE ABSENSI  -->
-        <div class="modal fade action-sheet inset" id="modal-show" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" style="z-index:10000">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Absen Tanggal <span class="status-date badge badge-success"></span></h5>
-                        <a href="javascript:void(0);" class="close" style="position: absolute;right:15px;top: 10px;"  data-dismiss="modal" aria-hidden="true"><ion-icon name="close-outline"></ion-icon></a>
-                    </div>
-                    <div class="modal-body">
-                        <div class="action-sheet-content">
-
-                            <form id="update-history">
-                                <input type="hidden" name="presence_id" id="presence_id" readonly>
-
-                                <!--<div class="form-group basic">
-                                    <div class="input-wrapper">
-                                        <label class="label">Jam Masuk</label>
-                                        <input type="text" class="form-control" id="timein" name="time_in" value="" required>
-                                        <i class="clear-input">
-                                            <ion-icon name="close-circle"></ion-icon>
-                                        </i>
-                                    </div>
-                                    <span class="small">Format jam ex: 07:30</span>
-                                </div>
-
-                                <div class="form-group basic">
-                                    <div class="input-wrapper">
-                                        <label class="label">Jam Pulang</label>
-                                        <input type="text" class="form-control" name="time_out" id="timeout" value="" required>
-                                        <i class="clear-input">
-                                            <ion-icon name="close-circle"></ion-icon>
-                                        </i>
-                                    </div>
-                                    <span class="small">Format jam ex: 17:00</span>
-                                </div>-->
-
-
-                                <div class="form-group basic">
-                                    <div class="input-wrapper">
-                                        <label class="label">Kehadiran</label>
-                                        <select class="form-control custom-select" name="present_id" id="status" required><option value="1">Hadir</option><option value="3">Izin</option><option value="2">Sakit</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="form-group basic">
-                                    <label class="label">Keterangan</label>
-                                    <div class="input-wrapper">
-                                    <textarea id="information" rows="2" class="form-control" name="information" placeholder="Keterangan"></textarea>
-                                    </div>
-                                    <span class="small">Kosongkan jika tidak memberi keterangan</span>
-                                </div>
-
-                                <div class="form-group basic">
-                                    <button type="submit" class="btn btn-primary btn-block">Simpan</button>
-                                </div>
-                            </form>
-
+                        <div class="form-group boxed">
+                            <div class="input-wrapper">
+                                <label class="label" for="text4">Nama Lengkap</label>
+                                <input type="text" class="form-control" value="<?= $_SESSION['nama_lengkap'];?>" style="background:#eeeeee" disabled readonly>
+                                <i class="clear-input">
+                                    <ion-icon name="close-circle"></ion-icon>
+                                </i>
+                            </div>
                         </div>
-                    </div>
+
+                        <div class="form-group boxed">
+                            <div class="input-wrapper">
+                                <label class="label" for="text4">Jabatan</label>
+                                <?php
+                                    $jabatan = $_SESSION['jabatan']; 
+                                    $query = $koneksi->prepare("SELECT jabatan FROM jabatan WHERE ref = ?");
+                                    $query->bind_param('s', $jabatan);
+                                    $query->execute();
+                                    $db_query = $query->get_result();
+                                    $fetch = $db_query->fetch_assoc();
+                                
+                                ?>
+                                <input type="text" class="form-control" value="<?= $fetch['jabatan'];?>" style="background:#eeeeee" disabled readonly>
+                                <i class="clear-input">
+                                    <ion-icon name="close-circle"></ion-icon>
+                                </i>
+                            </div>
+                        </div>
+
+                        <div class="form-group boxed">
+                            <div class="input-wrapper">
+                                <label class="label" for="password4">Provinsi</label>
+                                <?php
+                                    $asal = $_SESSION['asal_abdi']; 
+                                    $query = $koneksi->prepare("SELECT asal_abdi FROM asal_abdi WHERE ref = ?");
+                                    $query->bind_param('s', $asal);
+                                    $query->execute();
+                                    $db_query = $query->get_result();
+                                    $fetch = $db_query->fetch_assoc();
+                                
+                                ?>
+                                <input type="text" class="form-control" value="<?= $fetch['asal_abdi'];?>" style="background:#eeeeee" disabled readonly>
+                                </select>
+                            </div>
+                        </div>
+                        
+                    </form>
+
                 </div>
             </div>
         </div>
-        <!-- * END UPDATE ABSENSI -->
 
-</div>
-<?php 
+      
+        <div class="section mt-2 mb-2">
+            <div class="section-title">Update Password</div>
+            <div class="card">
+                <div class="card-body">
+                    <form id="update-password">
+                        <div class="form-group boxed">
+                            <div class="input-wrapper">
+                                <label class="label" for="text4">Email</label>
+                                <input type="email" class="form-control" name="email" id="password" value="<?= $_SESSION['email'];?>" style="background:#eeeeee" readonly>
+                                <i class="clear-input">
+                                    <ion-icon name="close-circle"></ion-icon>
+                                </i>
+                            </div>
+                        </div>
+
+                        <div class="form-group boxed">
+                            <div class="input-wrapper">
+                                <label class="label" for="email4">Password baru</label>
+                                <input type="password" class="form-control" name="password" id="password" required>
+                                <i class="clear-input">
+                                    <ion-icon name="close-circle"></ion-icon>
+                                </i>
+                            </div>
+                        </div>
+                        <hr>
+                        <button type="submit" class="btn btn-primary mr-1 btn-block">Simpan</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!-- * App Capsule -->
+
+    <?php 
         include 'assets/layout/footbar.php';
     ?>
 <!-- * App Bottom Menu -->
@@ -291,32 +277,6 @@
 <script src="assets/js/base.js"></script>
 <script src="assets/js/sweetalert.min.js"></script>
 <script src="assets/js/webcamjs/webcam.min.js"></script>
-<script src="assets/js/plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="assets/js/plugins/datatables/dataTables.bootstrap.min.js"></script>
-<script src="assets/js/plugins/datepicker/bootstrap-datepicker.js"></script>
-<script src="assets/js/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
-<script>
-    $(".datepicker").datepicker({
-        format: "dd-mm-yyyy",
-        "autoclose": true
-    }); 
-    
-</script>
-<script>
-    $(document).ready( function () {
-    $('#table_id').DataTable();
-} );
-    // Disable search and ordering by default
-    $.extend( $.fn.dataTable.defaults, {
-        searching: false
-    } );
-    
-    // For this specific table we are going to enable ordering
-    // (searching is still disabled)
-    $('#table_id').DataTable( {
-        ordering: true
-    } );
-</script>
 <script src="assets/js/sw-script.js"></script>  <!-- </body></html> -->
   </body>
 </html>
